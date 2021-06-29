@@ -1,0 +1,90 @@
+#carOffersCarousel {
+  position: relative;
+  .services_carousel-item {
+    height: 100%;
+    .services_carousel-item--img {
+      .label {
+        top: 0;
+        left: 10%;
+        background-color: #A58F33;
+        color: white;
+      }
+      img {
+        height: 40vh;
+      }
+    }
+    // services_carousel-item--data
+    .services_carousel-item--info {
+      border-bottom: solid 0.3px #606060;
+    }
+    .services_carousel-item--price {
+      .price-before {
+        line-height: 1em;
+        position: relative;
+        &::before, strike::before {
+            top: 50%;
+            background:red;
+            opacity:.7;
+            content: '';
+            width: 110%;
+            position: absolute;
+            height:.1em;
+            border-radius:.1em;
+            left: -5%;
+            white-space:nowrap;
+            display: block;
+            transform: rotate(-15deg);
+        }
+
+}
+    }
+    .services_carousel-item--btns{
+      ul {
+        li {
+          a {
+            color: white;
+            background-color: #A58F33;
+            svg {
+              flex: 0 0 14%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+
+ // swiper navigation custom styl
+ #mySwiper-offers {
+  // .swiper-container {
+    position: unset;
+  // }
+  // swiper style
+  .swiper-slide {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  .swiper-button-prev {
+    right: 0;
+  }
+  .swiper-button-next {
+    left: 0;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    &::after {
+      font-size: 2.5rem;
+      color: #B5B5B5;
+      font-weight: bold;
+    }
+  }
+  //mobile style
+  .mySwiper-mobile {
+    svg {
+      width: inherit;
+    }
+  }
+}
+

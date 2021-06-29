@@ -1,0 +1,29 @@
+@import './variables.scss' ;
+
+//range slider input
+.e-control-wrapper.e-slider-container .e-slider .e-handle.e-tap-handle::after {
+  background-color: #A58F33 !important;
+  display: none;
+}
+
+.highlighted-txt {
+  color: #A58F33;
+}
+p, a{
+  text-overflow: ellipsis
+}
+
+// to set .... instead of wrap text
+.nowrap-txt {
+  white-space: wrap;
+  // width: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+@media (max-width:768px) {
+  a,p,div,span,li,button {
+    font-size: 1.5rem;
+  }
+}

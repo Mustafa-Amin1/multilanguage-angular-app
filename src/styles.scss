@@ -1,0 +1,51 @@
+
+
+
+
+/* You can add global styles to this file, and also import other style files */
+
+// carousel library
+@import '~swiper/swiper-bundle';
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+//app style
+@import './app/shared/styles/all.scss' ;
+
+*{
+  box-sizing: border-box;
+  text-align: right;
+  scroll-behavior: smooth;
+
+}
+
+
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  font-size: 1.2rem;
+  height: 35rem;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+ul {
+  padding-right: 0;
+  list-style: none;
+  margin-bottom: 0;
+  li {
+    text-align: right;
+  }
+}
+
+a{
+  text-decoration: none !important;
+  color: black;
+  cursor: pointer;
+}

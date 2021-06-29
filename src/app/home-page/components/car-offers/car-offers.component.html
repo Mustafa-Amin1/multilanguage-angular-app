@@ -1,0 +1,17 @@
+<div id="carOffers">
+  <div class="container">
+    <div class="row justify-content-center mb-5 flex-column">
+        <h2 class="carOffers_title  text-center">
+          <span class="highlighted-txt "> ما هي</span>
+          افضل ؟
+        </h2>
+
+      <div class="carOffers_sections text-center" >
+        <a   class="offers carOffers_sections-offers carOffers_sections-link d-inline-block px-3 py-2 carOffers_sections-link-active" (click)="toggleSections($event)"> العروض</a>
+        <a  class="all carOffers_sections-cars carOffers_sections-link d-inline-block px-3 py-2" (click)="toggleSections($event)">السيارات</a>
+      </div>
+    </div>
+  </div>
+  <!-- carousel -->
+  <app-car-offers-carousel [isAllCars]="isAllCars"></app-car-offers-carousel>
+</div>

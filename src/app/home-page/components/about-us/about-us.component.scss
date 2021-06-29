@@ -1,0 +1,50 @@
+#aboutUs {
+  color: #5D5D5E;
+
+  .aboutUs_text {
+    font-size: 1.5rem;
+    height: 85px;
+    overflow: hidden;
+    padding: 10px;
+
+    p {
+      white-space: wrap;
+
+    }
+  }
+
+  .seeMoreClicked {
+    height: 100%;
+  }
+  a#seeMoreBtn {
+    border: 1px solid #707070;
+        width: 83px;
+        color: #5D5D5E;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 10px;
+    .icon {
+      color: #A58F33;
+    }
+  }
+
+  .about_us-img {
+    img {
+      max-height: 360px;
+      min-height: 360px;
+    }
+  }
+}
+
+  //********************************** for mobile screens ******************************
+
+// media query
+@media (max-width:640px) {
+  #aboutUs {
+    .about_us-img {
+      .book2 {
+        display: none !important;
+      }
+    }
+  }
+}

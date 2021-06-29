@@ -1,0 +1,262 @@
+@import "../../../../../node_modules/@syncfusion/ej2-base/styles/material.css" ;
+
+@import "../../../../../node_modules/@syncfusion/ej2-angular-inputs/styles/material.css" ;
+@import '../../../../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import "../../../../../node_modules/@syncfusion/ej2-buttons/styles/material.css" ;
+// @import "../../../../../node_modules/@syncfusion/ej2-popups/styles/material.css" ;
+// @import '../../../../../node_modules/@syncfusion/ej2-base/styles/material.css';
+// @import '../../../../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+// @import '../../../../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../../../../../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../../../../../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../../../../../node_modules/@syncfusion/ej2-angular-dropdowns/styles/material.css';
+#car_search_form {
+  position: relative;
+  font-size: 1.5rem;
+  form {
+    position: unset;
+    top: -10%;
+  }
+  .wrap {
+    box-sizing: border-box;
+    margin: 0 auto;
+    // padding: 30px 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 15px 0px lightgray;
+    position: relative;
+    z-index: 1000000000;
+    top: -20px;
+    margin-bottom: 50px !important;
+    background-color: white;
+    }
+    .car_search_form-link, .car_inputs_form-link {
+      a {
+        width: 22rem;
+        background-color:  #E0E0E2;
+        color: #606060;
+        cursor: pointer;
+      }
+      svg {
+        width: 20px;
+      }
+    }
+    .car_search_form-rangeslider {
+      flex: 0 0 99% !important;
+      max-width: 100% !important;
+    }
+    .car_search_form-inputs {
+      .car_search_form-inputs--carMark {
+        .e-control-wrapper {
+          height: 42px;
+          border: none;
+
+        }
+      }
+      .car_search_form-inputs--carModel {
+         .e-control-wrapper {
+          height: 42px;
+          border: none;
+
+        }
+      }
+      .car_search_form-inputs--submit {
+        button {
+          width: 22rem;
+          height: 42px;
+          background-color: #E0E0E2;
+          color: #606060;
+          outline: transparent;
+          border: none;
+          svg {
+            width: 20px;
+          }
+        }
+
+      }
+    }
+  }
+
+
+
+
+ //dropdown style input
+ .e-ddl.e-input-group.e-control-wrapper .e-input {
+  font-size: 20px;
+  font-family: emoji;
+  color: #606060;
+  background: #E0E0E2;
+  padding: 10px;
+}
+//icon
+.e-ddl.e-input-group .e-input-group-icon,.e-ddl.e-input-group.e-control-wrapper .e-input-group-icon:hover {
+color: #A58F33;
+// font-size: 13px;
+background-color: #E0E0E2 ;
+margin: 0 !important;
+padding-left: 10px;
+}
+.e-ddl.e-input-group.e-control-wrapper .e-ddl-icon::before {
+  content: '\e94d';
+}
+//focus
+.e-ddl.e-input-group.e-control-wrapper.e-input-focus::before, .e-ddl.e-input-group.e-control-wrapper.e-input-focus::after {
+background: #A58F33;
+}
+.e-outline.e-input-group.e-input-focus:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),.e-outline.e-input-group.e-input-focus.e-control-wrapper:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left),.e-outline.e-input-group.e-input-focus:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled),.e-outline.e-input-group.e-control-wrapper.e-input-focus:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled) {
+border-color: #b1bd15;
+box-shadow: inset 1px 1px #b1bd15, inset -1px 0 #b1bd15, inset 0 -1px #b1bd15;
+}
+.e-input-group.e-control-wrapper:not(.e-float-icon-left):not(.e-float-input)::before,
+.e-input-group:not(.e-float-icon-left):not(.e-float-input)::before,
+.e-input-group.e-control-wrapper:not(.e-float-icon-left):not(.e-float-input)::after,
+input-group:not(.e-float-icon-left):not(.e-float-input)::after {
+  background: #A58F33;
+}
+//arrow btn active
+.e-input-group:not(.e-disabled) .e-input-group-icon:active, .e-input-group.e-control-wrapper:not(.e-disabled) .e-input-group-icon:active {
+  background: #d0c9c900;
+  color: rgba(0, 0, 0, 0.54);
+}
+//placeholder
+.e-ddl.e-input-group input.e-input::placeholder {
+color: #606060;
+}
+//dopdownlist popoup list
+.e-dropdownbase .e-list-item, .e-dropdownbase .e-list-item.e-item-focus {
+// background-color: #29c2b8;
+// color: #207cd9;
+// font-family: emoji;
+// min-height: 29px;
+}
+//items
+.e-dropdownbase .e-list-item.e-item-focus,
+.e-list-item.e-active,
+.e-dropdownbase .e-list-item.e-active.e-hover, .e-dropdownbase .e-list-item.e-hover {
+// background-color: blue;
+color: #606060 !important;
+}
+
+
+
+
+
+
+
+
+//slider track
+.e-control-wrapper.e-slider-container.e-horizontal .e-slider-track {
+  background: #E0E0E2;
+  height: 10px;
+  border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -ms-border-radius: 10px 10px 10px 10px;
+  -o-border-radius: 10px 10px 10px 10px;
+}
+.e-control-wrapper.e-slider-container .e-slider .e-range {
+  background-color: #A58F33;
+  height: 10px;
+
+}
+//range circles
+.e-control-wrapper.e-slider-container .e-slider .e-handle {
+  background-color: #A58F33;
+  width: 20px ;
+  height: 20px ;
+  border-color: #A58F33;
+}
+.e-control-wrapper.e-slider-container .e-slider .e-handle::after {
+  background-color: #A58F33 !important;
+}
+//tooltip
+.e-slider-tooltip.e-tooltip-wrap.e-popup {
+  background-color: #E0E0E2 ;
+}
+.e-slider-tooltip.e-tooltip-wrap.e-popup .e-tip-content {
+  color: #606060;
+}
+.e-slider-tooltip.e-tooltip-wrap.e-popup .e-arrow-tip-outer.e-tip-bottom {
+
+  border-top-color: #E0E0E2
+
+}
+.e-slider-tooltip.e-tooltip-wrap.e-popup .e-arrow-tip-inner {
+  color: #E0E0E2;
+}
+//limits
+.e-control-wrapper.e-slider-container.e-horizontal .e-limits {
+background-color: yellow;
+}
+//ticks
+.e-scale .e-tick.e-custom::before {
+content: '\e967';
+position: absolute;
+}
+//buttons
+.e-control-wrapper.e-slider-container .e-slider-button {
+background: #E0E0E2;
+height: 40px;
+// width: 25px;
+}
+
+
+
+
+
+
+
+
+//********************************** for mobile screens ******************************
+
+// media query
+@media (max-width:640px) {
+  #car_search_form {
+    .car_search_form-link {
+      display: none !important;
+    }
+    .car_search_form-input {
+      a {
+        width: 22rem;
+        background-color:  #E0E0E2;
+        color: #606060;
+        cursor: pointer;
+      }
+      svg {
+        width: 20px;
+      }
+    }
+    .car_search_form-title {
+      flex: 0 0 100%;
+      max-width: 100%;
+      h3,p {
+        text-align: center;
+      }
+    }
+    .mobile-screen  {
+      display: block !important;
+    }
+    .larg-screen {
+      display: none !important;
+    }
+  }
+  }
+  // for larg screen
+  @media (min-width:640px) {
+
+
+    .mobile-screen  {
+      display: none !important;
+    }
+    .larg-screen {
+      display: block !important;
+    }
+  }
+
+//for small screen
+@media (max-width:576px) {
+  #car_search_form .wrap {
+    top: 0 !important;
+    margin-top: 30px;
+  }
+}
+

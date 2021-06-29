@@ -1,0 +1,14 @@
+<div id="carousel">
+  <swiper
+  [slidesPerView]="1"
+  [spaceBetween]="50"
+  (swiper)="onSwiper($event)"
+  (slideChange)="onSlideChange()"
+  [navigation]="true"
+  [pagination]="{ clickable: true }"
+  [scrollbar]="{ draggable: true }"
+>
+  <ng-template swiperSlide *ngFor="let imgItem of images"><img [src]="imgItem.path" class="img-fluid"></ng-template>
+</swiper>
+
+</div>

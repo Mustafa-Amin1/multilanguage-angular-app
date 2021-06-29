@@ -1,0 +1,40 @@
+<div id="ourClients" class="mb-5">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <h2 class="ourClients_title  text-center">
+        <span class="highlighted-txt "> ما هي</span>
+        الوكالات المعتمدة لدينا ؟
+      </h2>
+      <div id="paragraphTxt" class="ourClients_text">
+        <p>
+          <span class="highlighted-txt">هذا النص</span>
+          هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
+          هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق .
+        </p>
+        <p>
+          إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما
+          ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان
+          أن يطلع على صورة حقيقية لتصميم الموقع.
+        </p>
+        <p>
+          ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر
+          على
+          المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.
+        </p>
+      </div>
+      <a class="ourClients_btn mr-auto p-2 d-flex align-items-center justify-content-between " id="seeMoreBtn" (click)="seeMore()">
+        <span class="d-inline">المزيد</span>
+        <span class="fas fa-chevron-down icon  d-inline"></span>
+      </a>
+    </div>
+    <!--  clients images -->
+    <div class="row justify-content-start">
+        <div class="col-2 text-center" *ngFor="let agancyImg of agancyImgs">
+          <!-- <img class="img-fluid" src="../../../../assets/images/home-page/caroffers-carousel/Rectangle 35.png" alt="agancy"> -->
+          <img class="img-fluid w-100" [src]="agancyImg.agancyImgSrc" alt="agancy">
+
+        </div>
+    </div>
+  </div>
+</div>
+
