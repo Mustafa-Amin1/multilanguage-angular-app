@@ -4,8 +4,7 @@
 
 /* You can add global styles to this file, and also import other style files */
 
-// carousel library
-@import '~swiper/swiper-bundle';
+
 
 
 /* Importing Bootstrap SCSS file. */
@@ -48,4 +47,10 @@ a{
   text-decoration: none !important;
   color: black;
   cursor: pointer;
+}
+// media query
+@media (max-width:768px) {
+  a,p,div,li,button {
+    font-size: 1.4rem;
+  }
 }

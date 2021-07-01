@@ -78,14 +78,14 @@
   <div class="top_nav">
     <!-- <div class="container"> -->
       <div class="row px-5 py-2 align-items-center">
-        <div class="col-8 d-flex">
+        <div class="col-8 d-flex align-items-center">
 
           <div class="select_language px-2 d-flex align-items-center">
             <img class="img-fluid" [src]="selectedLanguageImg">
-            <!-- <select id="selectList" class="text-left" value="Arabic" [(ngModel)]="selectedLanguage" (change)="selectLanguageChange()">
+            <select id="selectList" class="text-left" value="Arabic" [(ngModel)]="selectedLanguage" (change)="selectLanguageChange()">
               <option value="English">English</option>
               <option value="Arabic">Arabic</option>
-            </select> -->
+            </select>
           </div>
 
         <div class="social_icons">
@@ -123,7 +123,7 @@
   </div>
 <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
 
-  <a class="navbar-brand ml-auto mr-0" href="#">
+  <a class="navbar-brand ml-auto mr-0 col-8 col-md-3" href="#">
     <svg id="Group_4" data-name="Group 4" xmlns="http://www.w3.org/2000/svg" width="292.789" height="112.751"
       viewBox="0 0 292.789 112.751">
       <path id="Path_8" data-name="Path 8"
@@ -212,15 +212,18 @@
       </g>
     </svg>
   </a>
-  <button id='toggleBtn' class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+  <div class=" col-2 px-0 text-left navbar-toggler--wrapper d-none">
+    <button id='toggleBtn' class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav"
     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleMenu()">
-    <svg id="toggleBtnIcon" class="ham hamRotate ham4" viewBox="0 0 100 100" width="80" >
+    <svg id="toggleBtnIcon" class="ham hamRotate ham4 w-100" viewBox="0 0 100 100" width="80" >
       <path class="line top" d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
       <path class="line middle" d="m 70,50 h -40" />
       <path class="line bottom"
         d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
     </svg>
   </button>
+  </div>
+
   <div class="collapse navbar-collapse mb-3 px-md-3 align-self-end" id="navbarNav">
     <ul class="navbar-nav justify-content-between w-100">
       <li class="nav-item active">

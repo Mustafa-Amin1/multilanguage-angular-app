@@ -1,0 +1,90 @@
+// carousel library
+@import '~swiper/swiper-bundle';
+
+
+#carousel {
+  .swiper-scrollbar  {
+    display: none;
+  }
+// carousel pagination dots
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 30px;
+
+    .swiper-pagination-bullet {
+      width: 3vh;
+      height: 3vh;
+      background-color: #F9F8F8;
+      border: 1px solid #F9F8F8;
+      opacity: 1 !important;
+    }
+
+
+  }
+  // carousel paginationactive dot
+  .swiper-pagination-bullet-active {
+    background-color: transparent !important;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 25%;
+      width: 50%;
+      height: 50%;
+      margin: 0 25%;
+      background-color: #F9F8F8;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+}
+  }
+
+  //for small screen
+@media (max-width:576px) {
+    .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+      bottom: 10px ;
+
+    }
+  }
+}
+
+// navigation buttons next and prev
+.swiper-button-prev::after {
+  content: '\f105' !important;
+}
+.swiper-button-next::after {
+  content: '\f104' !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+font-family: 'Font Awesome 5 Free' !important;
+font-weight:900 !important;
+}
+//range slider input
+.e-control-wrapper.e-slider-container .e-slider .e-handle.e-tap-handle::after {
+  background-color: #A58F33 !important;
+  display: none;
+}
+
+
+.section_title {
+  font-size: 4rem !important;
+}
+.section_text {
+  font-size: 2.5rem !important;
+}
+// media query
+@media (max-width:768px) {
+  .section_title {
+    font-size: 3rem !important;
+  }
+}
+
+// media query
+@media (max-width:640px) {
+  a,p,div,li,button {
+    font-size: 1.3rem;
+  }
+}
