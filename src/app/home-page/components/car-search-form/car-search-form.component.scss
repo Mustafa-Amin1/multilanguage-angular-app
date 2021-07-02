@@ -85,7 +85,7 @@
   font-family: emoji;
   color: #606060;
   background: #E0E0E2;
-  padding: 10px;
+  padding: 10px !important;
 }
 //icon
 .e-ddl.e-input-group .e-input-group-icon,.e-ddl.e-input-group.e-control-wrapper .e-input-group-icon:hover {
@@ -119,7 +119,7 @@ input-group:not(.e-float-icon-left):not(.e-float-input)::after {
 }
 //placeholder
 .e-ddl.e-input-group input.e-input::placeholder {
-color: #606060;
+  color: #606060;
 }
 //dopdownlist popoup list
 .e-dropdownbase .e-list-item, .e-dropdownbase .e-list-item.e-item-focus {
@@ -238,6 +238,10 @@ height: 40px;
     .larg-screen {
       display: none !important;
     }
+    //placeholder
+    .e-ddl.e-input-group input.e-input::placeholder {
+      font-size: 1.6rem !important;
+    }
   }
   }
   // for larg screen
@@ -253,10 +257,11 @@ height: 40px;
   }
 
 //for small screen
-@media (max-width:576px) {
+// @media (max-width:576px) {
+@media (max-width:640px) {
   #car_search_form .wrap {
     top: 0 !important;
-    margin-top: 30px;
+    // margin-top: 30px;
   }
 }
 

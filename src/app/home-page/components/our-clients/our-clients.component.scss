@@ -40,6 +40,17 @@
     a#seeMoreBtn {
       display: none !important;
     }
+    .ourClients_img-wrapper {
+      .ourClient_img {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+
+      div:nth-child(even) {
+        border-right: 2px solid #b7b6b663;
+      }
+    }
+
   }
   }
 

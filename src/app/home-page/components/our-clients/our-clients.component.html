@@ -28,11 +28,10 @@
       </a>
     </div>
     <!--  clients images -->
-    <div class="row justify-content-start">
-        <div class="col-2 text-center" *ngFor="let agancyImg of agancyImgs">
+    <div class="row justify-content-start ourClients_img-wrapper">
+        <div class="col-sm-6 col-md-2  mb-3 text-center ourClient_img" *ngFor="let agancyImg of agancyImgs">
           <!-- <img class="img-fluid" src="../../../../assets/images/home-page/caroffers-carousel/Rectangle 35.png" alt="agancy"> -->
           <img class="img-fluid w-100" [src]="agancyImg.agancyImgSrc" alt="agancy">
-
         </div>
     </div>
   </div>

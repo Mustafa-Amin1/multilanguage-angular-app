@@ -45,7 +45,6 @@ button {
 }
 
 .links,.copy_right-md {
-  background-color: #232323;
   .social_icons, .top_icon  {
     a {
       display: inline-block;
@@ -85,6 +84,7 @@ button {
   //=============  start larg screens
   //===========================================================================================================
 #footer .links-md {
+  background-color: #232323;
   padding-block: 4rem;
   a{
     width: 100%;
@@ -127,6 +127,58 @@ button {
   //=============  start mobile screen
   //===========================================================================================================
   #footer .links-sm {
+    background-color: #1A1A1A;
+    .links-contact {
+      h6 {
+        font-size: 1.6rem;
+      }
+      #subscibeBtn  span {
+        font-size: 1rem;
+      }
+      input, button {
+        min-height: 23px;
+        max-height: 23px;
+      }
+      #emailInput {
+        border-left: none;
+      }
+      ::-webkit-input-placeholder { /* Edge */
+        font-size: .7rem;
+      }
+
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        font-size: .7rem;
+      }
+
+      ::placeholder {
+        font-size: .7rem;
+      }
+      p {
+        font-size: .8rem;
+      }
+    }
+    .social_icons  {
+      a {
+        width: 2.5rem;
+        height: 2.5rem;
+        span {
+          font-size: 1.7rem;
+        }
+      }
+    }
+    .download_apps {
+      .download_apps-title {
+        font-size: 1rem;
+      }
+    }
+    .links_contact ,
+    .links_branches,
+    .links_cars {
+      li  a{
+        font-size: .9rem !important;
+      }
+    }
+
     ul {
       li {
         span {
@@ -148,6 +200,9 @@ button {
     background-color: #191919;
     span {
       color: #A58F33;
+    }
+    p {
+      font-size: 1rem;
     }
   }
 

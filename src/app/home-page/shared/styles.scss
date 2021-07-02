@@ -8,7 +8,7 @@
   }
 // carousel pagination dots
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
-    bottom: 30px;
+    bottom: 40px;
 
     .swiper-pagination-bullet {
       width: 3vh;
@@ -41,10 +41,13 @@
   }
 
   //for small screen
-@media (max-width:576px) {
+@media (max-width:640px) {
     .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
       bottom: 10px ;
-
+      .swiper-pagination-bullet {
+        width: 2vh;
+        height: 2vh;
+      }
     }
   }
 }
@@ -59,8 +62,8 @@
 
 .swiper-button-prev::after,
 .swiper-button-next::after{
-font-family: 'Font Awesome 5 Free' !important;
-font-weight:900 !important;
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight:900 !important;
 }
 //range slider input
 .e-control-wrapper.e-slider-container .e-slider .e-handle.e-tap-handle::after {

@@ -1,15 +1,25 @@
-.homePage_section-two {
-  background-image: url('../../assets/images/home-page/bg1.png');
+// larg screens
+@media (min-width:768px) {
+  .homePage_section-two {
+    background-image: url('../../assets/images/home-page/bg1.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .homePage_section-companies {
+    background-image: url('../../assets/images/home-page/bg2.svg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: inherit;
+  background-size: cover;
+
+  }
+}
+// ipad and mobile
+@media (max-width:768px) {
+  .homePage_section-two,
+  .homePage_section-companies {
+    background-color: #E5E5E5;
+  }
 
 }
 
-.homePage_section-companies {
-  background-image: url('../../assets/images/home-page/bg2.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: inherit;
-
-}
