@@ -49,7 +49,7 @@
         cursor: pointer;
         background-color: transparent;
         border: none;
-        color: black;
+        color: white;
 
         border-radius: 10px;
         -webkit-border-radius: 10px;
@@ -67,6 +67,10 @@
           background-color: white !important;
           padding-block: 5px;
           cursor: pointer;
+          color: black;
+          &:active {
+            color: #A58F33 !important;
+          }
 
         }
         option:hover {

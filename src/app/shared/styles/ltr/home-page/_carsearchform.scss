@@ -9,3 +9,14 @@
   text-align: right !important ;
   // background-color: auto !important;
   }
+.swiper-slide {
+  direction: ltr !important;
+
+  .services_carousel-item--price  {
+    .price-txt  {
+      // text-align: right !important;
+    }
+  }
+}
+
+

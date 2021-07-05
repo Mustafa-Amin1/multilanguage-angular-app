@@ -3,7 +3,7 @@
   //===========================================================================================================
 
 *{
-  color: #FFFFFF;
+  color: #FFFFFF ;
 }
 h6 {
   font-size: 1.2rem;
@@ -43,7 +43,13 @@ button {
   outline: none;
   border: none;
 }
-
+a {
+  color: #FFFFFF !important;
+  &:hover {
+    color: #A58F33 !important;
+    font-weight: 600;
+  }
+}
 .links,.copy_right-md {
   .social_icons, .top_icon  {
     a {
@@ -72,9 +78,9 @@ button {
         -o-transition: .5s;
       }
     }
-    svg {
-      width: 70%;
-    }
+    // svg {
+    //   width: 70%;
+    // }
 }
   //===========================================================================================================
   //=============  End General Style
@@ -89,6 +95,7 @@ button {
   a{
     width: 100%;
     font-size: 1rem;
+
     &:hover span {
       transform: translate(-15%);
       -webkit-transform: translate(-15%);
@@ -209,3 +216,24 @@ button {
     //===========================================================================================================
   //=============  End mobile screen
   //===========================================================================================================
+
+  @media (min-width:767px) {
+    .copy_right-md ,
+    .links-md {
+      display: block;
+    }
+    .copy_right-sm ,
+    .links-sm {
+      display: none;
+    }
+  }
+  @media (max-width:768px) {
+    .copy_right-md ,
+    .links-md {
+      display: none;
+    }
+    .copy_right-sm ,
+    .links-sm {
+      display: block;
+    }
+  }

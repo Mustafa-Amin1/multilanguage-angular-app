@@ -8,16 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   constructor() { }
-  public smallScreens= false
-  ngOnInit(): void {
 
-    // for small screens
-    if(window.innerWidth <= 768) {
-      this.smallScreens = true
-    }else {
-      this.smallScreens = false
-    }
-console.log(this.smallScreens );
+  ngOnInit(): void {
 
   }
 

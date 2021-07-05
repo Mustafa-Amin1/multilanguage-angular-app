@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-car-offers',
@@ -7,7 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CarOffersComponent implements OnInit {
 public isAllCars= false
-  constructor() { }
+
+  constructor(public translate: TranslateService) { }
   @Input()
   routerLinkActive: string | string[]
   ngOnInit(): void {

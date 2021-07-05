@@ -4,7 +4,7 @@
     height: 100%;
     .services_carousel-item--img {
       min-height: 20vh;
-      max-height: 20vh;
+      // max-height: 20vh;
       .label {
         top: 0;
         left: 10%;
@@ -12,7 +12,7 @@
         color: white;
       }
       img {
-        height: 40vh;
+        height: 30vh;
       }
     }
     // services_carousel-item--data
@@ -48,7 +48,7 @@
             background-color: #A58F33;
             svg {
               flex: 0 0 14%;
-              min-height: 4vh;
+              // min-height: 4vh;
               max-height: 4vh;
             }
           }
@@ -60,8 +60,8 @@
   .services_carousel-item.mobile_screen {
     color: #4D4E4E !important;
     .services_carousel-item--img {
-      min-height: 20vh;
-      max-height: 20vh;
+      height: 30vh;
+      // max-height: 20vh;
       .brand-img {
         top: 0;
         left: 0;
@@ -129,7 +129,7 @@
             background-color: #A58F33;
             svg {
               flex: 0 0 14%;
-              min-height: 3vh !important;
+              // min-height: 3vh !important;
               max-height: 3vh !important;
             }
           }

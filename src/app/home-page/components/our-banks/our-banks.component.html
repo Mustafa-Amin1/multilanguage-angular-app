@@ -2,34 +2,28 @@
   <div class="container">
     <div class="row justify-content-center mb-5">
       <h2 class="ourBanks_title  section_title text-center mb-5">
-        <span class="highlighted-txt "> ما هي</span>
-        الشركات و البنوك المعتمدة علينا ؟
+        <span class="highlighted-txt "> {{ 'WHAT' | translate }}</span>
+        {{ 'BANKS_TITLE' | translate }}
       </h2>
       <div id="paragraphTxt" class="ourBanks_text section_text">
         <p>
-          <span class="highlighted-txt">هذا النص</span>
-          هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل
-          هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق .
+          <span class="highlighted-txt">{{response.HighLightedText[translate.currentLang]}}</span>  {{response.Text1[translate.currentLang]}}
         </p>
         <p>
-          إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما
-          ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان
-          أن يطلع على صورة حقيقية لتصميم الموقع.
+          {{response.Text2[translate.currentLang]}}
         </p>
         <p>
-          ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر
-          على
-          المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.
+          {{response.Text3[translate.currentLang]}}
         </p>
       </div>
       <a class="ourBanks_btn mr-auto p-2 d-flex align-items-center justify-content-between " id="seeMoreBtn" (click)="seeMore()">
-        <span class="d-inline">المزيد</span>
+        <span class="d-inline">{{'MORE' | translate}}</span>
         <span class="fas fa-chevron-down icon  d-inline"></span>
       </a>
     </div>
         <!--  clients images -->
         <div class="row justify-content-start">
-          <div class="col-md-2 col-sm-6 text-center" *ngFor="let bankMarkImg of bankMarks">
+          <div class="col-md-2 col-6 text-center" *ngFor="let bankMarkImg of bankMarks">
             <img class="img-fluid" [src]="bankMarkImg.bankMarkImgSrc" alt="bank">
           </div>
       </div>

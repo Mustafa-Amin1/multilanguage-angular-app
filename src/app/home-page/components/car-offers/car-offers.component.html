@@ -2,16 +2,16 @@
   <div class="container">
     <div class="row justify-content-center mb-5 flex-column">
         <h2 class="carOffers_title  section_title text-center mb-5">
-          <span class="highlighted-txt "> ما هي</span>
-          افضل ؟
+          <span class="highlighted-txt ">{{'WHAT' | translate }}</span>
+          {{'BEST' | translate }}
         </h2>
 
       <div class="carOffers_sections text-center" >
-        <a   class="offers carOffers_sections-offers carOffers_sections-link d-inline-block px-3 py-2 carOffers_sections-link-active" (click)="toggleSections($event)"> العروض</a>
-        <a  class="all carOffers_sections-cars carOffers_sections-link d-inline-block px-3 py-2" (click)="toggleSections($event)">السيارات</a>
+        <a   class="offers carOffers_sections-offers carOffers_sections-link d-inline-block px-3 py-2 carOffers_sections-link-active" (click)="toggleSections($event)"> {{'OFFERS' | translate}}</a>
+        <a  class="all carOffers_sections-cars carOffers_sections-link d-inline-block px-3 py-2" (click)="toggleSections($event)"> {{ 'CARS' | translate }} </a>
       </div>
     </div>
   </div>
   <!-- carousel -->
-  <app-car-offers-carousel [isAllCars]="isAllCars"></app-car-offers-carousel>
+  <app-car-offers-carousel></app-car-offers-carousel>
 </div>

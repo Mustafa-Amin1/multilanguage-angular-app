@@ -1,7 +1,7 @@
 <div id="carOffersCarousel" class="container-fluid px-5 mb-5">
 <!-- offers swiper -->
 <section *ngIf="isAllCars != true">
-  <swiper  class="" [slidesPerView]="1" [spaceBetween]="10" [navigation]="true"
+  <swiper  class="" [slidesPerView]="1" [spaceBetween]="10" [navigation]="true" dir="rtl"
   [breakpoints]="{
     '640': {
       slidesPerView: 1,
@@ -18,13 +18,13 @@
   }"
   class="mySwiper" id="mySwiper-offers" >
     <!-- offers Items -->
-      <ng-template swiperSlide *ngFor="let swiperItem of CarOffersArr" >
+      <ng-template swiperSlide *ngFor="let swiperItem of response.CarOffersArr[translate.currentLang]" >
         <div class="container" >
             <!-- larg screens and ipad -->
           <div class="services_carousel-item larg_screen">
             <div class="container">
               <div class="services_carousel-item--img row">
-                <span class="label position-absolute px-3 py-1 rounded">جديد</span>
+                <span class="label position-absolute px-3 py-1 rounded">{{ 'NEW' | translate}}</span>
                 <img class="img-fluid w-75 m-auto" [src]="swiperItem.carImgSrc"
                   alt="cars offers">
               </div>
@@ -41,7 +41,7 @@
               <div class="row justify-content-between">
                 <div class="services_carousel-item--price d-flex flex-column">
                   <span class="price price-before mb-auto">{{swiperItem.PriceBefor}}  <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
-                  <span class="price price-txt">{{'AFTER' | translate }}</span>
+                  <span class="price price-txt text-right">{{'AFTER' | translate }}</span>
                   <span class="price price-after mt-auto">{{swiperItem.PriceAfter}} <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
                 </div>
                 <div class="services_carousel-item--btns col-6 p-0 d-inline-block">
@@ -104,7 +104,7 @@
               </div>
               <div class="services_carousel-item--price row py-3 mb-3 align-items-center">
                 <span class="price price-before col-5">{{swiperItem.PriceBefor}} <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
-                <span class="price price-txt col-2 p-0 text-center">{{'AFTER' | translate }}</span>
+                <span class="price price-txt col-2 p-0 text-right">{{'AFTER' | translate }}</span>
                 <span class="price price-after col-5 text-left">{{swiperItem.PriceAfter}} <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
               </div>
               <div class="services_carousel-item--btns row">
@@ -152,7 +152,7 @@
 
   <!--  All Items swiper-->
   <section *ngIf="isAllCars == true">
-    <swiper  class="" [slidesPerView]="1" [spaceBetween]="10" [navigation]="true"
+    <swiper  class="" [slidesPerView]="1" [spaceBetween]="10" [navigation]="true" dir="rtl"
     [breakpoints]="{
       '640': {
         slidesPerView: 1,
@@ -168,13 +168,13 @@
       }
     }"
     class="mySwiper" id="mySwiper-offers" >
-        <ng-template swiperSlide *ngFor="let swiperItem of AllCarsArr" >
+        <ng-template swiperSlide *ngFor="let swiperItem of response.AllCarsArr[translate.currentLang]" >
           <div class="container" >
             <!-- larg screens and ipad -->
             <div class="services_carousel-item larg_screen">
               <div class="container">
                 <div class="services_carousel-item--img row">
-                  <span class="label position-absolute px-3 py-1 rounded">جديد</span>
+                  <span class="label position-absolute px-3 py-1 rounded">{{ 'NEW' | translate}}</span>
                   <img class="img-fluid w-75 m-auto" [src]="swiperItem.carImgSrc"
                     alt="cars offers">
                 </div>
@@ -189,9 +189,9 @@
                   <span class="brand-name">{{swiperItem.EnName}}</span>
                 </div>
                 <div class="row justify-content-between">
-                  <div class="services_carousel-item--price d-flex flex-column">
+                  <div class="services_carousel-item--price d-flex flex-column justify-content-center">
                     <span class="price price-before mb-auto">{{swiperItem.PriceBefor}}<small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
-                    <span class="price price-txt">{{'AFTER' | translate }}</span>
+                    <span class="price price-txt text-right">{{'AFTER' | translate }}</span>
                     <span class="price price-after mt-auto">{{swiperItem.PriceAfter}}<small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
                   </div>
                   <div class="services_carousel-item--btns col-6 p-0 d-inline-block">
@@ -254,7 +254,7 @@
                 </div>
                 <div class="services_carousel-item--price row py-3 mb-3 align-items-center">
                   <span class="price price-before col-5">{{swiperItem.PriceBefor}} <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
-                  <span class="price price-txt col-2 p-0 text-center">{{'AFTER' | translate }}</span>
+                  <span class="price price-txt col-2 p-0 text-right">{{'AFTER' | translate }}</span>
                   <span class="price price-after col-5 text-left">{{swiperItem.PriceAfter}} <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
                 </div>
                 <div class="services_carousel-item--btns row">
