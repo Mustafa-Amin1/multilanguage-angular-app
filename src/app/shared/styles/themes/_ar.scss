@@ -1,0 +1,18 @@
+@import '~bootstrap/scss/bootstrap';
+
+@import '../ltr/home-page/carsearchform';
+
+:root {
+  font-size: 10px;
+}
+
+*{
+  text-align: right;
+}
+
+ul {
+  padding-right: 0;
+  li {
+    text-align: right;
+  }
+}

@@ -74,7 +74,7 @@
 
 
 
-
+<div id="navBar">
   <div class="top_nav">
     <!-- <div class="container"> -->
       <div class="row px-5 py-2 align-items-center">
@@ -83,13 +83,13 @@
           <div class="select_language px-2 d-flex align-items-center">
             <img class="img-fluid" [src]="selectedLanguageImg">
             <select id="selectList" class="text-left" value="Arabic" [(ngModel)]="selectedLanguage" (change)="selectLanguageChange()">
-              <option value="English">English</option>
+              <option value="English" >English</option>
               <option value="Arabic">Arabic</option>
             </select>
           </div>
 
         <div class="social_icons">
-          <ul class="d-inline-block">
+          <ul class="d-inline-block mb-0 text-right">
             <li class="d-inline-block">
               <a href="">
                 <span class="fab fa-instagram"></span>
@@ -123,7 +123,7 @@
   </div>
 <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
 
-  <a class="navbar-brand ml-auto mr-0 col-8 col-md-3" href="#">
+  <a class="navbar-brand ml-auto mr-0 col-8 col-md-auto" href="#">
     <svg id="Group_4" data-name="Group 4" xmlns="http://www.w3.org/2000/svg" width="292.789" height="112.751"
       viewBox="0 0 292.789 112.751">
       <path id="Path_8" data-name="Path 8"
@@ -227,25 +227,25 @@
   <div class="collapse navbar-collapse mb-3 px-md-3 align-self-end" id="navbarNav">
     <ul class="navbar-nav justify-content-between w-100">
       <li class="nav-item active">
-        <a class="nav-link" href="#">الرئيسية <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">{{'HOME' | translate}} <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">قائمة السيارات</a>
+        <a class="nav-link" href="#">{{'CAR_LST' | translate}}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">احسب قسطك</a>
+        <a class="nav-link" href="#">{{'CALC_INSTL' | translate}}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"> اطلب سيارتك</a>
+        <a class="nav-link" href="#"> {{'ORDR_CAR' | translate}}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"> الخدمات</a>
+        <a class="nav-link" href="#"> {{'SERVICES' | translate}}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"> فروعنا</a>
+        <a class="nav-link" href="#"> {{'BRANSHES' | translate}}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"> عن الشركة</a>
+        <a class="nav-link" href="#"> {{'ABOUT_US' | translate}}</a>
       </li>
 
     </ul>
@@ -253,9 +253,10 @@
   <div class="navbar_buttons col-2 d-md-inline-block d-sm-none">
     <ul class="navbar_buttons-list">
       <li class="mb-4"><a href="" class="d-block mb-2 p-2 text-center"><span class="fas fa-coins icon"></span><span
-            class="link-name px-2">احسب قسطك</span> </a></li>
-      <li><a href="" class="d-block p-2 text-center"><span class="fas fa-car"></span><span class="link-name px-2">اطلب
-            سيارتك</span></a></li>
+            class="link-name px-2">{{'CALC_INSTL' | translate}}</span> </a></li>
+      <li><a href="" class="d-block p-2 text-center">
+        <span class="fas fa-car"></span>
+        <span class="link-name px-2">{{'ORDR_CAR' | translate}}</span></a></li>
     </ul>
 
   </div>
@@ -263,23 +264,25 @@
   <div id="menu" [@expandedAnimation]="menuState">
     <!-- <div class="container"> -->
     <ul class="menu_list   py-3">
-      <li class="px-4"><a href=""> الرئيسية</a></li>
-      <li class="px-4"><a href="">ابحث عن السيارة</a></li>
-      <li class="px-4"><a href="">كل الماركات</a></li>
-      <li class="px-4"><a href="">كل الموديلات</a></li>
-      <li class="px-4"><a href="">احسب قسطك</a></li>
-      <li class="px-4"><a href="">ضمان كامل</a></li>
-      <li class="px-4"><a href="">اقل سعر</a></li>
-      <li class="px-4"><a href="">خدمات الطريق</a></li>
-      <li class="px-4"><a href="">تطبيق للجوالات</a></li>
-      <li class="px-4"><a href="">افضل العروض</a></li>
-      <li class="px-4"><a href="">الشركات والبنوك المعتمده</a></li>
-      <li class="px-4"><a href="">الوكالات المعتدة</a></li>
-      <li class="px-4"><a href="">تعريف بلشركة</a></li>
-      <li class="px-4"><a href="">اتصل بنا</a></li>
+      <li class="px-4"><a href=""> {{'HOME' | translate}}</a></li>
+      <li class="px-4"><a href="">{{'CAR_SEARCH' | translate}}</a></li>
+      <li class="px-4"><a href="">{{'ALL_MARKS' | translate}}</a></li>
+      <li class="px-4"><a href="">{{'ALL_MODELS' | translate}}</a></li>
+      <li class="px-4"><a href="">{{'CALC_INSTL' | translate}}</a></li>
+      <li class="px-4"><a href="">{{'FUL_GURANTE' | translate}}</a></li>
+      <li class="px-4"><a href="">{{'LES_PRICE' | translate}}</a></li>
+      <li class="px-4"><a href="">{{'WAY_SERVCS' | translate}}</a></li>
+      <li class="px-4"><a href="">{{'MOBILE_APPS' | translate}}</a></li>
+      <li class="px-4"><a href="">{{'BST_OFFRS' | translate}}</a></li>
+      <li class="px-4"><a href="">{{'CMPNIS_BANKS' | translate}}</a></li>
+      <li class="px-4"><a href="">{{'AGENCIES' | translate}}</a></li>
+      <li class="px-4"><a href="">{{'COMP_DESC' | translate}}</a></li>
+      <li class="px-4"><a href="">{{'CALL_US' | translate}}</a></li>
     </ul>
     <!-- </div> -->
   </div>
 </nav>
+</div>
+
 
 <!-- </div> -->

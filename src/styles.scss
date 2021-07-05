@@ -1,46 +1,45 @@
 
+@import './app/shared/styles/themes/bootstrap';
 
-
-
-/* You can add global styles to this file, and also import other style files */
-
-
-
-
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+.rtl {
+  @import './app/shared/styles/themes/_ar';
+  // color: blue
+}
+.ltr {
+  @import './app/shared/styles/themes/_en';
+}
 
 //app style
 @import './app/shared/styles/all.scss' ;
-
-*{
-  box-sizing: border-box;
-  text-align: right;
-  scroll-behavior: smooth;
-
-}
-
-
 
 :root {
   font-size: 10px;
 }
 
-body {
-  font-family: 'Cairo', sans-serif;
-  font-size: 1.2rem;
-  // height: 35rem;
+*{
+  box-sizing: border-box;
+  // text-align: right;
+  scroll-behavior: smooth;
+
+}
+.direction-ltr {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+.direction-rtl {
   direction: rtl;
   unicode-bidi: bidi-override;
 }
 
+body {
+  font-family: 'Cairo', sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
 ul {
-  padding-right: 0;
   list-style: none;
-  margin-bottom: 0;
-  li {
-    text-align: right;
-  }
+  margin-bottom: 0 !important;
 }
 
 a{

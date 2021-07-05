@@ -3,12 +3,12 @@
     <div id='container' class="container wrap rounded">
       <div class="row">
         <div class="col-6 car_search_form-title">
-          <h3>ابحث عن سيارة</h3>
-          <p>نطاق السعر بالريال السعودي</p>
+          <h3>{{ 'CAR_SEARCH' | translate }}</h3>
+          <p>{{ 'PRIC_SAR' | translate }}</p>
         </div>
         <div class="col-6 text-left car_search_form-link">
           <a class=" p-3 mr-auto d-flex align-items-center">
-            <span class="col-8">احسب قسطك</span>
+            <span class="col-8 px-0">{{ 'CALC_INSTL' | translate }}</span>
             <svg class="img-fluid mr-auto" xmlns="http://www.w3.org/2000/svg" width="43.994" height="43.995" viewBox="0 0 43.994 43.995">
               <g id="Group_39" data-name="Group 39" transform="translate(0 0)">
                 <g id="Group_38" data-name="Group 38">
@@ -19,8 +19,9 @@
           </a>
         </div>
         <div class="col-11 mb-5 text-center car_search_form-rangeslider">
-          <ejs-slider id='slider' [type]='type' [min]= 'min' [max]= 'max' [value]= 'value' [tooltip]='tooltip'
-          [limits]='limits'  enableRtl="true" formControlName="PriceRange"></ejs-slider>
+          <!-- <ejs-slider id='slider' [type]='type' [min]= 'min' [max]= 'max' [value]= 'value' [tooltip]='tooltip'
+          [limits]='limits'  enableRtl="false" formControlName="PriceRange"></ejs-slider> -->
+          <ejs-slider id='rangeslidertooltip' #rangeslider [value]='rangevalue'  [type]='rangetype'  [min]='min' [max]='max'  [limits]='minRangeLimits' [tooltip]='tooltip'></ejs-slider>
         </div>
         <div class="col-12 car_search_form-inputs larg-screen">
           <div class="row ">
@@ -34,7 +35,7 @@
             </div>
             <div class="col-6 pr-0 mr-auto car_search_form-inputs--submit">
               <button type="submit" class=" p-3 mr-auto d-flex align-items-center">
-                <span class="col-8">ابحث</span>
+                <span class="col-8 px-0">{{ 'SEARCH' | translate }}</span>
 
                 <svg id="Group_33" class="img-fluid mr-auto " data-name="Group 33" xmlns="http://www.w3.org/2000/svg" width="37.614" height="37.614" viewBox="0 0 37.614 37.614">
                   <g id="Group_32" data-name="Group 32">
@@ -58,12 +59,13 @@
 
             </div>
             <div class="col-6 car_search_form-inputs--carModel mb-3">
-              <ejs-dropdownlist id='ddlelement2' class="" formControlName="CarModel" #samples [dataSource]='carModelsData' [fields]='carModelsFields' [placeholder]='carModelsWaterMark'></ejs-dropdownlist>
+
+              <ejs-dropdownlist id='ddlelement2' class="" enableRtl="true" formControlName="CarModel" #samples [dataSource]='carModelsData' [fields]='carModelsFields' [placeholder]='carModelsWaterMark'></ejs-dropdownlist>
 
             </div>
             <div class="col-6 text-left car_inputs_form-link">
               <a class=" px-3 w-auto h-100 d-flex align-items-center">
-                <span class="p-0">احسب قسطك</span>
+                <span class="p-0">{{'CALC_INSTL' | translate}}></span>
                 <svg class="img-fluid mr-auto" xmlns="http://www.w3.org/2000/svg" width="43.994" height="43.995" viewBox="0 0 43.994 43.995">
                   <g id="Group_39" data-name="Group 39" transform="translate(0 0)">
                     <g id="Group_38" data-name="Group 38">

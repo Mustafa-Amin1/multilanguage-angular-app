@@ -1,6 +1,7 @@
 import { Component, OnInit ,ViewEncapsulation} from '@angular/core';
 // import Swiper core and required modules
 import SwiperCore, {
+  Lazy,
   Navigation,
   Pagination,
   Mousewheel,
@@ -9,7 +10,7 @@ import SwiperCore, {
 } from "swiper/core";
 
 // install Swiper modules
-SwiperCore.use([Navigation, Pagination, Mousewheel, Keyboard]);
+SwiperCore.use([Lazy, Navigation, Pagination, Mousewheel, Keyboard]);
 
 @Component({
   selector: 'app-carousel1',

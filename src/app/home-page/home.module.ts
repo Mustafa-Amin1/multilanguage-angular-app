@@ -25,7 +25,9 @@ import { CarOffersCarouselComponent } from './components/car-offers-carousel/car
 import { OurBanksComponent } from './components/our-banks/our-banks.component';
 import { OurClientsComponent } from './components/our-clients/our-clients.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
-
+import { TranslateModule, TranslateLoader, TranslateFakeLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,18 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
   imports: [
     CommonModule,
     BrowserModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      defaultLanguage:"ar",
+      loader: {
+        // provide: TranslateHttpLoader,
+        provide: TranslateLoader,
+        // useClass: TranslateFakeLoader,
+        useFactory: CreateTranslateLoader,
+        deps: [HttpClient],
+      },
+
+    }),
     ReactiveFormsModule,
     FormsModule,
     SwiperModule,
@@ -52,3 +66,8 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
   ]
 })
 export class HomeModule { }
+
+//language function
+export function CreateTranslateLoader(http:HttpClient) {
+  return new TranslateHttpLoader(http,'../assets/i18n/','.json')
+}

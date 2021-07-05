@@ -21,6 +21,8 @@
     "@angular/platform-browser-dynamic": "~10.2.0",
     "@angular/router": "~10.2.0",
     "@ng-bootstrap/ng-bootstrap": "^8.0.4",
+    "@ngx-translate/core": "^13.0.0",
+    "@ngx-translate/http-loader": "^6.0.0",
     "@syncfusion/ej2-angular-buttons": "^19.1.63",
     "@syncfusion/ej2-angular-dropdowns": "^19.1.69",
     "@syncfusion/ej2-angular-inputs": "^19.1.67",

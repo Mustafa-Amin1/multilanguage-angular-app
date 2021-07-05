@@ -35,14 +35,14 @@
                   [src]="swiperItem.BrandImgSrc" alt="cars offers">
               </div>
               <div class="services_carousel-item--info row justify-content-between mb-3 pb-3 ">
-                <a class="name col-">مواصفات السيارة (...)</a>
+                <a class="name col-">{{'CAR_DESC' | translate}}</a>
                 <span class="brand-name">{{swiperItem.EnName}}</span>
               </div>
               <div class="row justify-content-between">
                 <div class="services_carousel-item--price d-flex flex-column">
-                  <span class="price price-before mb-auto">{{swiperItem.PriceBefor}} ر.س</span>
-                  <span class="price price-txt">بعد</span>
-                  <span class="price price-after mt-auto">{{swiperItem.PriceAfter}} ر.س</span>
+                  <span class="price price-before mb-auto">{{swiperItem.PriceBefor}}  <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
+                  <span class="price price-txt">{{'AFTER' | translate }}</span>
+                  <span class="price price-after mt-auto">{{swiperItem.PriceAfter}} <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
                 </div>
                 <div class="services_carousel-item--btns col-6 p-0 d-inline-block">
                   <ul class="services_carousel-item--btns-list">
@@ -64,7 +64,7 @@
                             </g>
                           </g>
                         </svg>
-                        <span class="link-name px-2">اطلبها كاش</span>
+                        <span class="link-name px-2">{{'ORDR_CASH' | translate}}</span>
                       </a>
                     </li>
                     <li>
@@ -75,7 +75,7 @@
                             d="M1065.776,2665.026v-2.082a7.606,7.606,0,1,0-8.495-8.5H1055.2a7.607,7.607,0,1,0-8.5,8.5v2.082a7.607,7.607,0,1,0,8.5,8.5h2.082a7.606,7.606,0,1,0,8.495-8.5Zm-4.75-9.739a.964.964,0,0,1,.966-.839h5.688a.949.949,0,0,1,.943,1.055.964.964,0,0,1-.967.841h-5.688A.947.947,0,0,1,1061.026,2655.287Zm-16.208,1.056a.963.963,0,0,1-.966-.841.948.948,0,0,1,.941-1.055h1.909v-1.909a.948.948,0,0,1,1.055-.941.963.963,0,0,1,.841.966v1.885h1.909a.948.948,0,0,1,.941,1.055.963.963,0,0,1-.966.841H1048.6v1.885a.963.963,0,0,1-.841.966.949.949,0,0,1-1.055-.941v-1.909Zm5.547,17.576a.948.948,0,1,1-1.339,1.341l-1.35-1.351-1.35,1.351a.948.948,0,0,1-1.341-1.341l1.35-1.35-1.35-1.351a.947.947,0,0,1,1.341-1.339l1.35,1.35,1.35-1.35a.947.947,0,0,1,1.339,1.339l-1.35,1.351Zm6.916-2.292H1055.2a7.626,7.626,0,0,0-6.6-6.6v-2.082a7.626,7.626,0,0,0,6.6-6.6h2.082a7.625,7.625,0,0,0,6.6,6.6v2.082a7.625,7.625,0,0,0-6.6,6.6Zm10.4,3.79h-5.688a.963.963,0,0,1-.966-.839.946.946,0,0,1,.941-1.055h5.688a.963.963,0,0,1,.967.841A.948.948,0,0,1,1067.679,2675.417Zm0-3.79h-5.688a.963.963,0,0,1-.966-.838.947.947,0,0,1,.941-1.056h5.688a.964.964,0,0,1,.967.841A.948.948,0,0,1,1067.679,2671.627Z"
                             transform="translate(-1040.046 -2647.791)" fill="#fff" />
                         </svg>
-                        <span class="link-name px-2">احسب قسطك</span>
+                        <span class="link-name px-2">{{'CALC_INSTL' | translate}}</span>
                       </a>
                     </li>
                   </ul>
@@ -97,15 +97,15 @@
                 <span class="car-name mb-1">{{swiperItem.ArName }}
                 </span>
                 <span class="brand-name mb-1">{{swiperItem.EnName}}</span>
-                <a class="car-desc ">مواصفات السيارة (...)</a>
+                <a class="car-desc ">{{'CAR_DESC' | translate }}</a>
 
                 <!-- <img class="img-fluid brand-img col-3 p-0"
                   [src]="swiperItem.BrandImgSrc" alt="cars offers"> -->
               </div>
               <div class="services_carousel-item--price row py-3 mb-3 align-items-center">
-                <span class="price price-before col-5">{{swiperItem.PriceBefor}} <small class="align-text-bottom">ر.س</small></span>
-                <span class="price price-txt col-2 p-0 text-center">بعد</span>
-                <span class="price price-after col-5 text-left">{{swiperItem.PriceAfter}} <small class="align-text-bottom">ر.س</small></span>
+                <span class="price price-before col-5">{{swiperItem.PriceBefor}} <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
+                <span class="price price-txt col-2 p-0 text-center">{{'AFTER' | translate }}</span>
+                <span class="price price-after col-5 text-left">{{swiperItem.PriceAfter}} <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
               </div>
               <div class="services_carousel-item--btns row">
                 <ul class="services_carousel-item--btns-list d-flex justify-content-between w-100">
@@ -127,7 +127,7 @@
                           </g>
                         </g>
                       </svg>
-                      <span class="link-name px-2">اطلبها كاش</span>
+                      <span class="link-name px-2">{{ 'ORDR_CASH' | translate }}</span>
                     </a>
                   </li>
                   <li>
@@ -138,7 +138,7 @@
                           d="M1065.776,2665.026v-2.082a7.606,7.606,0,1,0-8.495-8.5H1055.2a7.607,7.607,0,1,0-8.5,8.5v2.082a7.607,7.607,0,1,0,8.5,8.5h2.082a7.606,7.606,0,1,0,8.495-8.5Zm-4.75-9.739a.964.964,0,0,1,.966-.839h5.688a.949.949,0,0,1,.943,1.055.964.964,0,0,1-.967.841h-5.688A.947.947,0,0,1,1061.026,2655.287Zm-16.208,1.056a.963.963,0,0,1-.966-.841.948.948,0,0,1,.941-1.055h1.909v-1.909a.948.948,0,0,1,1.055-.941.963.963,0,0,1,.841.966v1.885h1.909a.948.948,0,0,1,.941,1.055.963.963,0,0,1-.966.841H1048.6v1.885a.963.963,0,0,1-.841.966.949.949,0,0,1-1.055-.941v-1.909Zm5.547,17.576a.948.948,0,1,1-1.339,1.341l-1.35-1.351-1.35,1.351a.948.948,0,0,1-1.341-1.341l1.35-1.35-1.35-1.351a.947.947,0,0,1,1.341-1.339l1.35,1.35,1.35-1.35a.947.947,0,0,1,1.339,1.339l-1.35,1.351Zm6.916-2.292H1055.2a7.626,7.626,0,0,0-6.6-6.6v-2.082a7.626,7.626,0,0,0,6.6-6.6h2.082a7.625,7.625,0,0,0,6.6,6.6v2.082a7.625,7.625,0,0,0-6.6,6.6Zm10.4,3.79h-5.688a.963.963,0,0,1-.966-.839.946.946,0,0,1,.941-1.055h5.688a.963.963,0,0,1,.967.841A.948.948,0,0,1,1067.679,2675.417Zm0-3.79h-5.688a.963.963,0,0,1-.966-.838.947.947,0,0,1,.941-1.056h5.688a.964.964,0,0,1,.967.841A.948.948,0,0,1,1067.679,2671.627Z"
                           transform="translate(-1040.046 -2647.791)" fill="#fff" />
                       </svg>
-                      <span class="link-name px-2">احسب قسطك</span>
+                      <span class="link-name px-2">{{ 'CALC_INSTL' | translate}}</span>
                     </a>
                   </li>
                 </ul>
@@ -185,14 +185,14 @@
                     [src]="swiperItem.BrandImgSrc" alt="cars offers">
                 </div>
                 <div class="services_carousel-item--info row justify-content-between mb-3 pb-3 ">
-                  <a class="name col-">مواصفات السيارة (...)</a>
+                  <a class="name col-">{{'CAR_DESC' | translate }}</a>
                   <span class="brand-name">{{swiperItem.EnName}}</span>
                 </div>
                 <div class="row justify-content-between">
                   <div class="services_carousel-item--price d-flex flex-column">
-                    <span class="price price-before mb-auto">{{swiperItem.PriceBefor}} ر.س</span>
-                    <span class="price price-txt">بعد</span>
-                    <span class="price price-after mt-auto">{{swiperItem.PriceAfter}} ر.س</span>
+                    <span class="price price-before mb-auto">{{swiperItem.PriceBefor}}<small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
+                    <span class="price price-txt">{{'AFTER' | translate }}</span>
+                    <span class="price price-after mt-auto">{{swiperItem.PriceAfter}}<small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
                   </div>
                   <div class="services_carousel-item--btns col-6 p-0 d-inline-block">
                     <ul class="services_carousel-item--btns-list">
@@ -214,7 +214,7 @@
                               </g>
                             </g>
                           </svg>
-                          <span class="link-name px-2">اطلبها كاش</span>
+                          <span class="link-name px-2">{{ 'ORDR_CASH' | translate }}</span>
                         </a>
                       </li>
                       <li>
@@ -225,7 +225,7 @@
                               d="M1065.776,2665.026v-2.082a7.606,7.606,0,1,0-8.495-8.5H1055.2a7.607,7.607,0,1,0-8.5,8.5v2.082a7.607,7.607,0,1,0,8.5,8.5h2.082a7.606,7.606,0,1,0,8.495-8.5Zm-4.75-9.739a.964.964,0,0,1,.966-.839h5.688a.949.949,0,0,1,.943,1.055.964.964,0,0,1-.967.841h-5.688A.947.947,0,0,1,1061.026,2655.287Zm-16.208,1.056a.963.963,0,0,1-.966-.841.948.948,0,0,1,.941-1.055h1.909v-1.909a.948.948,0,0,1,1.055-.941.963.963,0,0,1,.841.966v1.885h1.909a.948.948,0,0,1,.941,1.055.963.963,0,0,1-.966.841H1048.6v1.885a.963.963,0,0,1-.841.966.949.949,0,0,1-1.055-.941v-1.909Zm5.547,17.576a.948.948,0,1,1-1.339,1.341l-1.35-1.351-1.35,1.351a.948.948,0,0,1-1.341-1.341l1.35-1.35-1.35-1.351a.947.947,0,0,1,1.341-1.339l1.35,1.35,1.35-1.35a.947.947,0,0,1,1.339,1.339l-1.35,1.351Zm6.916-2.292H1055.2a7.626,7.626,0,0,0-6.6-6.6v-2.082a7.626,7.626,0,0,0,6.6-6.6h2.082a7.625,7.625,0,0,0,6.6,6.6v2.082a7.625,7.625,0,0,0-6.6,6.6Zm10.4,3.79h-5.688a.963.963,0,0,1-.966-.839.946.946,0,0,1,.941-1.055h5.688a.963.963,0,0,1,.967.841A.948.948,0,0,1,1067.679,2675.417Zm0-3.79h-5.688a.963.963,0,0,1-.966-.838.947.947,0,0,1,.941-1.056h5.688a.964.964,0,0,1,.967.841A.948.948,0,0,1,1067.679,2671.627Z"
                               transform="translate(-1040.046 -2647.791)" fill="#fff" />
                           </svg>
-                          <span class="link-name px-2">احسب قسطك</span>
+                          <span class="link-name px-2">{{ 'CALC_INSTL' | translate}}</span>
                         </a>
                       </li>
                     </ul>
@@ -247,15 +247,15 @@
                   <span class="car-name mb-1">{{swiperItem.ArName }}
                   </span>
                   <span class="brand-name mb-1">{{swiperItem.EnName}}</span>
-                  <a class="car-desc ">مواصفات السيارة (...)</a>
+                  <a class="car-desc ">{{'CAR_DESC' | translate }}</a>
 
                   <!-- <img class="img-fluid brand-img col-3 p-0"
                     [src]="swiperItem.BrandImgSrc" alt="cars offers"> -->
                 </div>
                 <div class="services_carousel-item--price row py-3 mb-3 align-items-center">
-                  <span class="price price-before col-5">{{swiperItem.PriceBefor}} <small class="align-text-bottom">ر.س</small></span>
-                  <span class="price price-txt col-2 p-0 text-center">بعد</span>
-                  <span class="price price-after col-5 text-left">{{swiperItem.PriceAfter}} <small class="align-text-bottom">ر.س</small></span>
+                  <span class="price price-before col-5">{{swiperItem.PriceBefor}} <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
+                  <span class="price price-txt col-2 p-0 text-center">{{'AFTER' | translate }}</span>
+                  <span class="price price-after col-5 text-left">{{swiperItem.PriceAfter}} <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
                 </div>
                 <div class="services_carousel-item--btns row">
                   <ul class="services_carousel-item--btns-list d-flex justify-content-between w-100">
@@ -277,7 +277,7 @@
                             </g>
                           </g>
                         </svg>
-                        <span class="link-name px-2">اطلبها كاش</span>
+                        <span class="link-name px-2">{{ 'ORDR_CASH' | translate }}</span>
                       </a>
                     </li>
                     <li>
@@ -288,7 +288,7 @@
                             d="M1065.776,2665.026v-2.082a7.606,7.606,0,1,0-8.495-8.5H1055.2a7.607,7.607,0,1,0-8.5,8.5v2.082a7.607,7.607,0,1,0,8.5,8.5h2.082a7.606,7.606,0,1,0,8.495-8.5Zm-4.75-9.739a.964.964,0,0,1,.966-.839h5.688a.949.949,0,0,1,.943,1.055.964.964,0,0,1-.967.841h-5.688A.947.947,0,0,1,1061.026,2655.287Zm-16.208,1.056a.963.963,0,0,1-.966-.841.948.948,0,0,1,.941-1.055h1.909v-1.909a.948.948,0,0,1,1.055-.941.963.963,0,0,1,.841.966v1.885h1.909a.948.948,0,0,1,.941,1.055.963.963,0,0,1-.966.841H1048.6v1.885a.963.963,0,0,1-.841.966.949.949,0,0,1-1.055-.941v-1.909Zm5.547,17.576a.948.948,0,1,1-1.339,1.341l-1.35-1.351-1.35,1.351a.948.948,0,0,1-1.341-1.341l1.35-1.35-1.35-1.351a.947.947,0,0,1,1.341-1.339l1.35,1.35,1.35-1.35a.947.947,0,0,1,1.339,1.339l-1.35,1.351Zm6.916-2.292H1055.2a7.626,7.626,0,0,0-6.6-6.6v-2.082a7.626,7.626,0,0,0,6.6-6.6h2.082a7.625,7.625,0,0,0,6.6,6.6v2.082a7.625,7.625,0,0,0-6.6,6.6Zm10.4,3.79h-5.688a.963.963,0,0,1-.966-.839.946.946,0,0,1,.941-1.055h5.688a.963.963,0,0,1,.967.841A.948.948,0,0,1,1067.679,2675.417Zm0-3.79h-5.688a.963.963,0,0,1-.966-.838.947.947,0,0,1,.941-1.056h5.688a.964.964,0,0,1,.967.841A.948.948,0,0,1,1067.679,2671.627Z"
                             transform="translate(-1040.046 -2647.791)" fill="#fff" />
                         </svg>
-                        <span class="link-name px-2">احسب قسطك</span>
+                        <span class="link-name px-2">{{ 'CALC_INSTL' | translate}}</span>
                       </a>
                     </li>
                   </ul>
