@@ -4,6 +4,7 @@
     height: 100%;
     .services_carousel-item--img {
       min-height: 20vh;
+      max-height: 20vh;
       .label {
         top: 0;
         left: 10%;
@@ -60,6 +61,7 @@
     color: #4D4E4E !important;
     .services_carousel-item--img {
       min-height: 20vh;
+      max-height: 20vh;
       .brand-img {
         top: 0;
         left: 0;
