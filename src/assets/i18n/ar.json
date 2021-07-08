@@ -68,5 +68,8 @@
   "SHARE_ICON":"fa-arrow-circle-left",
   "LINKS_ICON":"fa-chevron-left",
   "EMAIL_MSG": "نرسل لك افضل العروض واخر اخبار السيارات لمستخدمينا المشتركين",
-  "SIGNATURE": "جميع الحقوق محفوظة شركة رمز الاختيار 2021 &copy;"
+  "SIGNATURE": "جميع الحقوق محفوظة شركة رمز الاختيار 2021 ",
+  "SIGNATURE_2_TXT": "جميع الحقوق محفوظة شركة",
+  "COMPNY_NAME": "رمز الاختيار " ,
+  "SIGNATURE_2_YEAR": "2021 "
 }
