@@ -113,8 +113,13 @@
                 <a class="car-desc ">{{'CAR_DESC' | translate }}</a>
               </div>
               <div class="cars_carousel-item--price row py-3 mb-3 align-items-center">
-                <span class="price price-before col-5">{{swiperItem.PriceBefor}} <small class="align-text-bottom">{{
-                    'SAR' | translate }}</small></span>
+                <div class="col-5">
+                  <span class="price  price-before">
+                      {{swiperItem.PriceBefor}} <small class="align-text-bottom">{{
+                        'SAR' | translate }}</small>
+                  </span>
+                </div>
+
                 <span class="price price-txt col-2 p-0 text-center">{{'AFTER' | translate }}</span>
                 <span class="price price-after col-5 text-left">{{swiperItem.PriceAfter}} <small
                     class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
