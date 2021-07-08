@@ -41,7 +41,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     OurBanksComponent,
     OurClientsComponent,
     AboutUsComponent,
-    // SliderComponent
   ],
   imports: [
     CommonModule,
@@ -50,7 +49,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     TranslateModule.forRoot({
       defaultLanguage:"ar",
       loader: {
-        // provide: TranslateHttpLoader,
         provide: TranslateLoader,
         // useClass: TranslateFakeLoader,
         useFactory: CreateTranslateLoader,

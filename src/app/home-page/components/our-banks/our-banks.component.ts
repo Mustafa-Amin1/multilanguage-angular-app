@@ -125,7 +125,7 @@ export class OurBanksComponent implements OnInit {
   }
   // form text box height 100%
   public seeMore() {
-    let txt = document.getElementById('paragraphTxt')
+    let txt = document.getElementById('ourBankTxt')
     txt.classList.toggle('seeMoreClicked')
   }
 }

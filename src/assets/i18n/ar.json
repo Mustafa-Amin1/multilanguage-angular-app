@@ -65,6 +65,8 @@
   "SBSCRIB": "اشترك معنا يصلك كل جديد",
   "ENTR_EMAIL": "ادخل عنوان بريدك الالكتروني",
   "SHARE": "مشاركة",
+  "SHARE_ICON":"fa-arrow-circle-left",
+  "LINKS_ICON":"fa-chevron-left",
   "EMAIL_MSG": "نرسل لك افضل العروض واخر اخبار السيارات لمستخدمينا المشتركين",
   "SIGNATURE": "جميع الحقوق محفوظة شركة رمز الاختيار 2021 &copy;"
 }

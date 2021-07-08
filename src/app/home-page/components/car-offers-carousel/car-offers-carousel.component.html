@@ -1,8 +1,7 @@
 <div id="carOffersCarousel" class="container-fluid px-5 mb-5">
-<!-- offers swiper -->
-<section *ngIf="isAllCars != true">
-  <swiper  class="" [slidesPerView]="1" [spaceBetween]="10" [navigation]="true" dir="rtl"
-  [breakpoints]="{
+  <!-- offers swiper -->
+  <section *ngIf="isAllCars != true">
+    <swiper class="" [slidesPerView]="1" [spaceBetween]="10" [navigation]="true" dir="rtl" [breakpoints]="{
     '640': {
       slidesPerView: 1,
       spaceBetween: 20
@@ -15,51 +14,67 @@
       slidesPerView: 3,
       spaceBetween: 20
     }
-  }"
-  class="mySwiper" id="mySwiper-offers" >
-    <!-- offers Items -->
-      <ng-template swiperSlide *ngFor="let swiperItem of response.CarOffersArr[translate.currentLang]" >
-        <div class="container" >
-            <!-- larg screens and ipad -->
-          <div class="services_carousel-item larg_screen">
+  }" class="mySwiper" id="mySwiper-offers">
+      <!-- offers Items -->
+      <ng-template swiperSlide *ngFor="let swiperItem of response.CarOffersArr[translate.currentLang]">
+        <div class="container">
+          <!-- larg screens and ipad -->
+          <div class="cars_carousel-item larg_screen">
             <div class="container">
-              <div class="services_carousel-item--img row">
+              <div class="cars_carousel-item--img row">
                 <span class="label position-absolute px-3 py-1 rounded">{{ 'NEW' | translate}}</span>
-                <img class="img-fluid w-75 m-auto" [src]="swiperItem.carImgSrc"
-                  alt="cars offers">
+                <img class="img-fluid w-75 m-auto" [src]="swiperItem.carImgSrc" alt="cars offers">
               </div>
-              <div class="services_carousel-item--data row justify-content-between align-items-center">
+              <div class="cars_carousel-item--data row justify-content-between align-items-center">
                 <span class="name col-8 p-0">{{swiperItem.ArName }}
                 </span>
-                <img class="img-fluid brand-img col-3 p-0"
-                  [src]="swiperItem.BrandImgSrc" alt="cars offers">
+                <img class="img-fluid brand-img col-3 p-0" [src]="swiperItem.BrandImgSrc" alt="cars offers">
               </div>
-              <div class="services_carousel-item--info row justify-content-between mb-3 pb-3 ">
-                <a class="name col-">{{'CAR_DESC' | translate}}</a>
+              <div class="cars_carousel-item--info row justify-content-between mb-3 pb-3 ">
+                <a class="car-desc ">{{'CAR_DESC' | translate}}</a>
                 <span class="brand-name">{{swiperItem.EnName}}</span>
               </div>
               <div class="row justify-content-between">
-                <div class="services_carousel-item--price d-flex flex-column">
-                  <span class="price price-before mb-auto">{{swiperItem.PriceBefor}}  <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
-                  <span class="price price-txt text-right">{{'AFTER' | translate }}</span>
-                  <span class="price price-after mt-auto">{{swiperItem.PriceAfter}} <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
+                <div class="cars_carousel-item--price d-flex flex-column">
+                  <span class="price price-before mb-auto">{{swiperItem.PriceBefor}} <small class="align-text-bottom">{{
+                      'SAR' | translate }}</small></span>
+                  <span class="price price-txt text-right my-2">{{'AFTER' | translate }}</span>
+                  <span class="price price-after mt-auto">{{swiperItem.PriceAfter}} <small class="align-text-bottom">{{
+                      'SAR' | translate }}</small></span>
                 </div>
-                <div class="services_carousel-item--btns col-6 p-0 d-inline-block">
-                  <ul class="services_carousel-item--btns-list">
+                <div class="cars_carousel-item--btns col-6 p-0 d-inline-block">
+                  <ul class="cars_carousel-item--btns-list d-flex justify-content-between flex-column h-100">
                     <li class="mb-2">
-                      <a href="" class="d-flex p-2 justify-content-between align-items-center">
-                        <svg class="img-fluid" xmlns="http://www.w3.org/2000/svg" width="34.007" height="30.249" viewBox="0 0 34.007 30.249">
+                      <a href="" class="d-flex p-2 justify-content-between align-items-center dark-btn-anim">
+                        <svg class="img-fluid" xmlns="http://www.w3.org/2000/svg" width="34.007" height="30.249"
+                          viewBox="0 0 34.007 30.249">
                           <g id="Group_92" data-name="Group 92" transform="translate(0 0)">
                             <g id="Group_91" data-name="Group 91">
                               <g id="Group_90" data-name="Group 90">
-                                <path id="Path_85" data-name="Path 85" d="M646.407,2619.024a21.078,21.078,0,0,0,2.754-.177v-9.582a21.252,21.252,0,0,0-2.754-.177c-5.458,0-9.882,2.006-9.882,4.483v.971C636.525,2617.017,640.949,2619.024,646.407,2619.024Z" transform="translate(-636.525 -2601.488)" fill="#fff"/>
-                                <path id="Path_86" data-name="Path 86" d="M646.407,2621.7a21.343,21.343,0,0,0,2.754-.175v-2.809a21.12,21.12,0,0,1-2.754.177c-4.764,0-8.739-1.529-9.673-3.563a2.183,2.183,0,0,0-.209.918v.973C636.525,2619.7,640.949,2621.7,646.407,2621.7Z" transform="translate(-636.525 -2599.155)" fill="#fff"/>
-                                <path id="Path_87" data-name="Path 87" d="M649.161,2622.585v-.218a21.379,21.379,0,0,1-2.754.177c-4.764,0-8.739-1.529-9.673-3.565a2.193,2.193,0,0,0-.209.919v.971c0,2.475,4.424,4.482,9.882,4.482a20.972,20.972,0,0,0,3.124-.228,3.545,3.545,0,0,1-.37-1.567Z" transform="translate(-636.525 -2597.792)" fill="#fff"/>
-                                <path id="Path_88" data-name="Path 88" d="M656.778,2603.555c-5.457,0-9.881,2.006-9.881,4.481v.973c0,2.474,4.423,4.481,9.881,4.481s9.879-2.007,9.879-4.481v-.973C666.657,2605.561,662.234,2603.555,656.778,2603.555Z" transform="translate(-632.65 -2603.555)" fill="#fff"/>
-                                <path id="Path_89" data-name="Path 89" d="M656.778,2613.363c-4.764,0-8.739-1.529-9.673-3.563a2.179,2.179,0,0,0-.207.917v.971c0,2.475,4.423,4.481,9.881,4.481s9.879-2.006,9.879-4.481v-.971a2.179,2.179,0,0,0-.207-.917C665.515,2611.833,661.54,2613.363,656.778,2613.363Z" transform="translate(-632.65 -2601.222)" fill="#fff"/>
-                                <path id="Path_90" data-name="Path 90" d="M656.778,2617.009c-4.764,0-8.739-1.529-9.673-3.563a2.186,2.186,0,0,0-.207.918v.973c0,2.475,4.423,4.48,9.881,4.48s9.879-2.006,9.879-4.48v-.973a2.186,2.186,0,0,0-.207-.918C665.515,2615.482,661.54,2617.009,656.778,2617.009Z" transform="translate(-632.65 -2599.859)" fill="#fff"/>
-                                <path id="Path_91" data-name="Path 91" d="M656.778,2620.854c-4.764,0-8.739-1.529-9.673-3.563a2.187,2.187,0,0,0-.207.917v.971c0,2.475,4.423,4.482,9.881,4.482s9.879-2.007,9.879-4.482v-.971a2.187,2.187,0,0,0-.207-.917C665.515,2619.325,661.54,2620.854,656.778,2620.854Z" transform="translate(-632.65 -2598.423)" fill="#fff"/>
-                                <path id="Path_92" data-name="Path 92" d="M656.778,2624.5c-4.764,0-8.739-1.529-9.673-3.563a2.18,2.18,0,0,0-.207.917v.971c0,2.475,4.423,4.481,9.881,4.481s9.879-2.006,9.879-4.481v-.971a2.18,2.18,0,0,0-.207-.917C665.515,2622.973,661.54,2624.5,656.778,2624.5Z" transform="translate(-632.65 -2597.06)" fill="#fff"/>
+                                <path id="Path_85" data-name="Path 85"
+                                  d="M646.407,2619.024a21.078,21.078,0,0,0,2.754-.177v-9.582a21.252,21.252,0,0,0-2.754-.177c-5.458,0-9.882,2.006-9.882,4.483v.971C636.525,2617.017,640.949,2619.024,646.407,2619.024Z"
+                                  transform="translate(-636.525 -2601.488)" fill="#fff" />
+                                <path id="Path_86" data-name="Path 86"
+                                  d="M646.407,2621.7a21.343,21.343,0,0,0,2.754-.175v-2.809a21.12,21.12,0,0,1-2.754.177c-4.764,0-8.739-1.529-9.673-3.563a2.183,2.183,0,0,0-.209.918v.973C636.525,2619.7,640.949,2621.7,646.407,2621.7Z"
+                                  transform="translate(-636.525 -2599.155)" fill="#fff" />
+                                <path id="Path_87" data-name="Path 87"
+                                  d="M649.161,2622.585v-.218a21.379,21.379,0,0,1-2.754.177c-4.764,0-8.739-1.529-9.673-3.565a2.193,2.193,0,0,0-.209.919v.971c0,2.475,4.424,4.482,9.882,4.482a20.972,20.972,0,0,0,3.124-.228,3.545,3.545,0,0,1-.37-1.567Z"
+                                  transform="translate(-636.525 -2597.792)" fill="#fff" />
+                                <path id="Path_88" data-name="Path 88"
+                                  d="M656.778,2603.555c-5.457,0-9.881,2.006-9.881,4.481v.973c0,2.474,4.423,4.481,9.881,4.481s9.879-2.007,9.879-4.481v-.973C666.657,2605.561,662.234,2603.555,656.778,2603.555Z"
+                                  transform="translate(-632.65 -2603.555)" fill="#fff" />
+                                <path id="Path_89" data-name="Path 89"
+                                  d="M656.778,2613.363c-4.764,0-8.739-1.529-9.673-3.563a2.179,2.179,0,0,0-.207.917v.971c0,2.475,4.423,4.481,9.881,4.481s9.879-2.006,9.879-4.481v-.971a2.179,2.179,0,0,0-.207-.917C665.515,2611.833,661.54,2613.363,656.778,2613.363Z"
+                                  transform="translate(-632.65 -2601.222)" fill="#fff" />
+                                <path id="Path_90" data-name="Path 90"
+                                  d="M656.778,2617.009c-4.764,0-8.739-1.529-9.673-3.563a2.186,2.186,0,0,0-.207.918v.973c0,2.475,4.423,4.48,9.881,4.48s9.879-2.006,9.879-4.48v-.973a2.186,2.186,0,0,0-.207-.918C665.515,2615.482,661.54,2617.009,656.778,2617.009Z"
+                                  transform="translate(-632.65 -2599.859)" fill="#fff" />
+                                <path id="Path_91" data-name="Path 91"
+                                  d="M656.778,2620.854c-4.764,0-8.739-1.529-9.673-3.563a2.187,2.187,0,0,0-.207.917v.971c0,2.475,4.423,4.482,9.881,4.482s9.879-2.007,9.879-4.482v-.971a2.187,2.187,0,0,0-.207-.917C665.515,2619.325,661.54,2620.854,656.778,2620.854Z"
+                                  transform="translate(-632.65 -2598.423)" fill="#fff" />
+                                <path id="Path_92" data-name="Path 92"
+                                  d="M656.778,2624.5c-4.764,0-8.739-1.529-9.673-3.563a2.18,2.18,0,0,0-.207.917v.971c0,2.475,4.423,4.481,9.881,4.481s9.879-2.006,9.879-4.481v-.971a2.18,2.18,0,0,0-.207-.917C665.515,2622.973,661.54,2624.5,656.778,2624.5Z"
+                                  transform="translate(-632.65 -2597.06)" fill="#fff" />
                               </g>
                             </g>
                           </g>
@@ -68,14 +83,14 @@
                       </a>
                     </li>
                     <li>
-                      <a href="" class="d-flex  p-2 justify-content-between align-items-center">
+                      <a href="" class="d-flex  p-2 justify-content-between align-items-center dark-btn-anim">
                         <svg class="img-fluid" id="Group_115" data-name="Group 115" xmlns="http://www.w3.org/2000/svg"
                           width="32.388" height="32.387" viewBox="0 0 32.388 32.387">
                           <path id="Path_111" data-name="Path 111"
                             d="M1065.776,2665.026v-2.082a7.606,7.606,0,1,0-8.495-8.5H1055.2a7.607,7.607,0,1,0-8.5,8.5v2.082a7.607,7.607,0,1,0,8.5,8.5h2.082a7.606,7.606,0,1,0,8.495-8.5Zm-4.75-9.739a.964.964,0,0,1,.966-.839h5.688a.949.949,0,0,1,.943,1.055.964.964,0,0,1-.967.841h-5.688A.947.947,0,0,1,1061.026,2655.287Zm-16.208,1.056a.963.963,0,0,1-.966-.841.948.948,0,0,1,.941-1.055h1.909v-1.909a.948.948,0,0,1,1.055-.941.963.963,0,0,1,.841.966v1.885h1.909a.948.948,0,0,1,.941,1.055.963.963,0,0,1-.966.841H1048.6v1.885a.963.963,0,0,1-.841.966.949.949,0,0,1-1.055-.941v-1.909Zm5.547,17.576a.948.948,0,1,1-1.339,1.341l-1.35-1.351-1.35,1.351a.948.948,0,0,1-1.341-1.341l1.35-1.35-1.35-1.351a.947.947,0,0,1,1.341-1.339l1.35,1.35,1.35-1.35a.947.947,0,0,1,1.339,1.339l-1.35,1.351Zm6.916-2.292H1055.2a7.626,7.626,0,0,0-6.6-6.6v-2.082a7.626,7.626,0,0,0,6.6-6.6h2.082a7.625,7.625,0,0,0,6.6,6.6v2.082a7.625,7.625,0,0,0-6.6,6.6Zm10.4,3.79h-5.688a.963.963,0,0,1-.966-.839.946.946,0,0,1,.941-1.055h5.688a.963.963,0,0,1,.967.841A.948.948,0,0,1,1067.679,2675.417Zm0-3.79h-5.688a.963.963,0,0,1-.966-.838.947.947,0,0,1,.941-1.056h5.688a.964.964,0,0,1,.967.841A.948.948,0,0,1,1067.679,2671.627Z"
                             transform="translate(-1040.046 -2647.791)" fill="#fff" />
                         </svg>
-                        <span class="link-name px-2">{{'CALC_INSTL' | translate}}</span>
+                        <span class="link-name px-2">{{'CALC_INSTL' | translate}} </span>
                       </a>
                     </li>
                   </ul>
@@ -83,46 +98,60 @@
               </div>
             </div>
           </div>
-           <!-- mobile screens -->
-          <div class="services_carousel-item mobile_screen">
+          <!-- mobile screens -->
+          <div class="cars_carousel-item mobile_screen">
             <div class="container">
-              <div class="services_carousel-item--img row">
-                <!-- <span class="label position-absolute px-3 py-1 rounded">جديد</span> -->
-                <img class="img-fluid brand-img  p-0 position-absolute px-3 py-1"
-                [src]="swiperItem.BrandImgSrc" alt="cars offers">
-                <img class="img-fluid w-75 m-auto car-img" [src]="swiperItem.carImgSrc"
+              <div class="cars_carousel-item--img row">
+                <img class="img-fluid brand-img  p-0 position-absolute px-3 py-1" [src]="swiperItem.BrandImgSrc"
                   alt="cars offers">
+                <img class="img-fluid w-75 m-auto car-img" [src]="swiperItem.carImgSrc" alt="cars offers">
               </div>
-              <div class="services_carousel-item--data row justify-content-center align-items-center flex-column mb-3">
+              <div class="cars_carousel-item--data row justify-content-center align-items-center flex-column mb-3">
                 <span class="car-name mb-1">{{swiperItem.ArName }}
                 </span>
                 <span class="brand-name mb-1">{{swiperItem.EnName}}</span>
                 <a class="car-desc ">{{'CAR_DESC' | translate }}</a>
-
-                <!-- <img class="img-fluid brand-img col-3 p-0"
-                  [src]="swiperItem.BrandImgSrc" alt="cars offers"> -->
               </div>
-              <div class="services_carousel-item--price row py-3 mb-3 align-items-center">
-                <span class="price price-before col-5">{{swiperItem.PriceBefor}} <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
-                <span class="price price-txt col-2 p-0 text-right">{{'AFTER' | translate }}</span>
-                <span class="price price-after col-5 text-left">{{swiperItem.PriceAfter}} <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
+              <div class="cars_carousel-item--price row py-3 mb-3 align-items-center">
+                <span class="price price-before col-5">{{swiperItem.PriceBefor}} <small class="align-text-bottom">{{
+                    'SAR' | translate }}</small></span>
+                <span class="price price-txt col-2 p-0 text-center">{{'AFTER' | translate }}</span>
+                <span class="price price-after col-5 text-left">{{swiperItem.PriceAfter}} <small
+                    class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
               </div>
-              <div class="services_carousel-item--btns row">
-                <ul class="services_carousel-item--btns-list d-flex justify-content-between w-100">
+              <div class="cars_carousel-item--btns row">
+                <ul class="cars_carousel-item--btns-list d-flex justify-content-between w-100 ">
                   <li>
-                    <a href="" class="d-flex p-2 justify-content-between align-items-center rounded">
-                    <svg class="img-fluid" xmlns="http://www.w3.org/2000/svg" width="34.007" height="30.249" viewBox="0 0 34.007 30.249">
-                      <g id="Group_92" data-name="Group 92" transform="translate(0 0)">
+                    <a href="" class="d-flex p-2 justify-content-between align-items-center rounded dark-btn-anim">
+                      <svg class="img-fluid" xmlns="http://www.w3.org/2000/svg" width="34.007" height="30.249"
+                        viewBox="0 0 34.007 30.249">
+                        <g id="Group_92" data-name="Group 92" transform="translate(0 0)">
                           <g id="Group_91" data-name="Group 91">
                             <g id="Group_90" data-name="Group 90">
-                            <path id="Path_85" data-name="Path 85" d="M646.407,2619.024a21.078,21.078,0,0,0,2.754-.177v-9.582a21.252,21.252,0,0,0-2.754-.177c-5.458,0-9.882,2.006-9.882,4.483v.971C636.525,2617.017,640.949,2619.024,646.407,2619.024Z" transform="translate(-636.525 -2601.488)" fill="#fff"/>
-                              <path id="Path_86" data-name="Path 86" d="M646.407,2621.7a21.343,21.343,0,0,0,2.754-.175v-2.809a21.12,21.12,0,0,1-2.754.177c-4.764,0-8.739-1.529-9.673-3.563a2.183,2.183,0,0,0-.209.918v.973C636.525,2619.7,640.949,2621.7,646.407,2621.7Z" transform="translate(-636.525 -2599.155)" fill="#fff"/>
-                              <path id="Path_87" data-name="Path 87" d="M649.161,2622.585v-.218a21.379,21.379,0,0,1-2.754.177c-4.764,0-8.739-1.529-9.673-3.565a2.193,2.193,0,0,0-.209.919v.971c0,2.475,4.424,4.482,9.882,4.482a20.972,20.972,0,0,0,3.124-.228,3.545,3.545,0,0,1-.37-1.567Z" transform="translate(-636.525 -2597.792)" fill="#fff"/>
-                              <path id="Path_88" data-name="Path 88" d="M656.778,2603.555c-5.457,0-9.881,2.006-9.881,4.481v.973c0,2.474,4.423,4.481,9.881,4.481s9.879-2.007,9.879-4.481v-.973C666.657,2605.561,662.234,2603.555,656.778,2603.555Z" transform="translate(-632.65 -2603.555)" fill="#fff"/>
-                              <path id="Path_89" data-name="Path 89" d="M656.778,2613.363c-4.764,0-8.739-1.529-9.673-3.563a2.179,2.179,0,0,0-.207.917v.971c0,2.475,4.423,4.481,9.881,4.481s9.879-2.006,9.879-4.481v-.971a2.179,2.179,0,0,0-.207-.917C665.515,2611.833,661.54,2613.363,656.778,2613.363Z" transform="translate(-632.65 -2601.222)" fill="#fff"/>
-                              <path id="Path_90" data-name="Path 90" d="M656.778,2617.009c-4.764,0-8.739-1.529-9.673-3.563a2.186,2.186,0,0,0-.207.918v.973c0,2.475,4.423,4.48,9.881,4.48s9.879-2.006,9.879-4.48v-.973a2.186,2.186,0,0,0-.207-.918C665.515,2615.482,661.54,2617.009,656.778,2617.009Z" transform="translate(-632.65 -2599.859)" fill="#fff"/>
-                              <path id="Path_91" data-name="Path 91" d="M656.778,2620.854c-4.764,0-8.739-1.529-9.673-3.563a2.187,2.187,0,0,0-.207.917v.971c0,2.475,4.423,4.482,9.881,4.482s9.879-2.007,9.879-4.482v-.971a2.187,2.187,0,0,0-.207-.917C665.515,2619.325,661.54,2620.854,656.778,2620.854Z" transform="translate(-632.65 -2598.423)" fill="#fff"/>
-                              <path id="Path_92" data-name="Path 92" d="M656.778,2624.5c-4.764,0-8.739-1.529-9.673-3.563a2.18,2.18,0,0,0-.207.917v.971c0,2.475,4.423,4.481,9.881,4.481s9.879-2.006,9.879-4.481v-.971a2.18,2.18,0,0,0-.207-.917C665.515,2622.973,661.54,2624.5,656.778,2624.5Z" transform="translate(-632.65 -2597.06)" fill="#fff"/>
+                              <path id="Path_85" data-name="Path 85"
+                                d="M646.407,2619.024a21.078,21.078,0,0,0,2.754-.177v-9.582a21.252,21.252,0,0,0-2.754-.177c-5.458,0-9.882,2.006-9.882,4.483v.971C636.525,2617.017,640.949,2619.024,646.407,2619.024Z"
+                                transform="translate(-636.525 -2601.488)" fill="#fff" />
+                              <path id="Path_86" data-name="Path 86"
+                                d="M646.407,2621.7a21.343,21.343,0,0,0,2.754-.175v-2.809a21.12,21.12,0,0,1-2.754.177c-4.764,0-8.739-1.529-9.673-3.563a2.183,2.183,0,0,0-.209.918v.973C636.525,2619.7,640.949,2621.7,646.407,2621.7Z"
+                                transform="translate(-636.525 -2599.155)" fill="#fff" />
+                              <path id="Path_87" data-name="Path 87"
+                                d="M649.161,2622.585v-.218a21.379,21.379,0,0,1-2.754.177c-4.764,0-8.739-1.529-9.673-3.565a2.193,2.193,0,0,0-.209.919v.971c0,2.475,4.424,4.482,9.882,4.482a20.972,20.972,0,0,0,3.124-.228,3.545,3.545,0,0,1-.37-1.567Z"
+                                transform="translate(-636.525 -2597.792)" fill="#fff" />
+                              <path id="Path_88" data-name="Path 88"
+                                d="M656.778,2603.555c-5.457,0-9.881,2.006-9.881,4.481v.973c0,2.474,4.423,4.481,9.881,4.481s9.879-2.007,9.879-4.481v-.973C666.657,2605.561,662.234,2603.555,656.778,2603.555Z"
+                                transform="translate(-632.65 -2603.555)" fill="#fff" />
+                              <path id="Path_89" data-name="Path 89"
+                                d="M656.778,2613.363c-4.764,0-8.739-1.529-9.673-3.563a2.179,2.179,0,0,0-.207.917v.971c0,2.475,4.423,4.481,9.881,4.481s9.879-2.006,9.879-4.481v-.971a2.179,2.179,0,0,0-.207-.917C665.515,2611.833,661.54,2613.363,656.778,2613.363Z"
+                                transform="translate(-632.65 -2601.222)" fill="#fff" />
+                              <path id="Path_90" data-name="Path 90"
+                                d="M656.778,2617.009c-4.764,0-8.739-1.529-9.673-3.563a2.186,2.186,0,0,0-.207.918v.973c0,2.475,4.423,4.48,9.881,4.48s9.879-2.006,9.879-4.48v-.973a2.186,2.186,0,0,0-.207-.918C665.515,2615.482,661.54,2617.009,656.778,2617.009Z"
+                                transform="translate(-632.65 -2599.859)" fill="#fff" />
+                              <path id="Path_91" data-name="Path 91"
+                                d="M656.778,2620.854c-4.764,0-8.739-1.529-9.673-3.563a2.187,2.187,0,0,0-.207.917v.971c0,2.475,4.423,4.482,9.881,4.482s9.879-2.007,9.879-4.482v-.971a2.187,2.187,0,0,0-.207-.917C665.515,2619.325,661.54,2620.854,656.778,2620.854Z"
+                                transform="translate(-632.65 -2598.423)" fill="#fff" />
+                              <path id="Path_92" data-name="Path 92"
+                                d="M656.778,2624.5c-4.764,0-8.739-1.529-9.673-3.563a2.18,2.18,0,0,0-.207.917v.971c0,2.475,4.423,4.481,9.881,4.481s9.879-2.006,9.879-4.481v-.971a2.18,2.18,0,0,0-.207-.917C665.515,2622.973,661.54,2624.5,656.778,2624.5Z"
+                                transform="translate(-632.65 -2597.06)" fill="#fff" />
                             </g>
                           </g>
                         </g>
@@ -131,7 +160,186 @@
                     </a>
                   </li>
                   <li>
-                    <a href="" class="d-flex  p-2 justify-content-between align-items-center rounded">
+                    <a href="" class="d-flex  p-2 justify-content-between align-items-center rounded dark-btn-anim">
+                      <svg class="img-fluid" id="Group_115" data-name="Group 115" xmlns="http://www.w3.org/2000/svg"
+                        width="32.388" height="32.387" viewBox="0 0 32.388 32.387">
+                        <path id="Path_111" data-name="Path 111"
+                          d="M1065.776,2665.026v-2.082a7.606,7.606,0,1,0-8.495-8.5H1055.2a7.607,7.607,0,1,0-8.5,8.5v2.082a7.607,7.607,0,1,0,8.5,8.5h2.082a7.606,7.606,0,1,0,8.495-8.5Zm-4.75-9.739a.964.964,0,0,1,.966-.839h5.688a.949.949,0,0,1,.943,1.055.964.964,0,0,1-.967.841h-5.688A.947.947,0,0,1,1061.026,2655.287Zm-16.208,1.056a.963.963,0,0,1-.966-.841.948.948,0,0,1,.941-1.055h1.909v-1.909a.948.948,0,0,1,1.055-.941.963.963,0,0,1,.841.966v1.885h1.909a.948.948,0,0,1,.941,1.055.963.963,0,0,1-.966.841H1048.6v1.885a.963.963,0,0,1-.841.966.949.949,0,0,1-1.055-.941v-1.909Zm5.547,17.576a.948.948,0,1,1-1.339,1.341l-1.35-1.351-1.35,1.351a.948.948,0,0,1-1.341-1.341l1.35-1.35-1.35-1.351a.947.947,0,0,1,1.341-1.339l1.35,1.35,1.35-1.35a.947.947,0,0,1,1.339,1.339l-1.35,1.351Zm6.916-2.292H1055.2a7.626,7.626,0,0,0-6.6-6.6v-2.082a7.626,7.626,0,0,0,6.6-6.6h2.082a7.625,7.625,0,0,0,6.6,6.6v2.082a7.625,7.625,0,0,0-6.6,6.6Zm10.4,3.79h-5.688a.963.963,0,0,1-.966-.839.946.946,0,0,1,.941-1.055h5.688a.963.963,0,0,1,.967.841A.948.948,0,0,1,1067.679,2675.417Zm0-3.79h-5.688a.963.963,0,0,1-.966-.838.947.947,0,0,1,.941-1.056h5.688a.964.964,0,0,1,.967.841A.948.948,0,0,1,1067.679,2671.627Z"
+                          transform="translate(-1040.046 -2647.791)" fill="#fff" />
+                      </svg>
+                      <span class="link-name px-2"> {{ 'CALC_INSTL' | translate}} </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </swiper>
+  </section>
+
+  <!--  All Items swiper-->
+  <section *ngIf="isAllCars == true">
+    <swiper class="" [slidesPerView]="1" [spaceBetween]="10" [navigation]="true" dir="rtl" [breakpoints]="{
+      '640': {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      '768': {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      '1024': {
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
+    }" class="mySwiper" id="mySwiper-offers">
+      <ng-template swiperSlide *ngFor="let swiperItem of response.AllCarsArr[translate.currentLang]">
+        <div class="container">
+          <!-- larg screens and ipad -->
+          <div class="cars_carousel-item larg_screen">
+            <div class="container">
+              <div class="cars_carousel-item--img row">
+                <span class="label position-absolute px-3 py-1 rounded">{{ 'NEW' | translate}}</span>
+                <img class="img-fluid w-75 m-auto" [src]="swiperItem.carImgSrc" alt="cars offers">
+              </div>
+              <div class="cars_carousel-item--data row justify-content-between align-items-center">
+                <span class="name col-8 p-0">{{swiperItem.ArName }}
+                </span>
+                <img class="img-fluid brand-img col-3 p-0" [src]="swiperItem.BrandImgSrc" alt="cars offers">
+              </div>
+              <div class="cars_carousel-item--info row justify-content-between mb-3 pb-3 ">
+                <a class="car-desc">{{'CAR_DESC' | translate }}</a>
+                <span class="brand-name">{{swiperItem.EnName}}</span>
+              </div>
+              <div class="row justify-content-between">
+                <div class="cars_carousel-item--price d-flex flex-column justify-content-center">
+                  <span class="price price-before mb-auto">{{swiperItem.PriceBefor}}<small class="align-text-bottom">{{
+                      'SAR' | translate }}</small></span>
+                  <span class="price price-txt text-right my-2">{{'AFTER' | translate }}</span>
+                  <span class="price price-after mt-auto">{{swiperItem.PriceAfter}}<small class="align-text-bottom">{{
+                      'SAR' | translate }}</small></span>
+                </div>
+                <div class="cars_carousel-item--btns col-6 p-0 d-inline-block">
+                  <ul class="cars_carousel-item--btns-list  d-flex justify-content-between flex-column h-100">
+                    <li class="mb-2">
+                      <a href="" class="d-flex p-2 justify-content-between align-items-center dark-btn-anim">
+                        <svg class="img-fluid" xmlns="http://www.w3.org/2000/svg" width="34.007" height="30.249"
+                          viewBox="0 0 34.007 30.249">
+                          <g id="Group_92" data-name="Group 92" transform="translate(0 0)">
+                            <g id="Group_91" data-name="Group 91">
+                              <g id="Group_90" data-name="Group 90">
+                                <path id="Path_85" data-name="Path 85"
+                                  d="M646.407,2619.024a21.078,21.078,0,0,0,2.754-.177v-9.582a21.252,21.252,0,0,0-2.754-.177c-5.458,0-9.882,2.006-9.882,4.483v.971C636.525,2617.017,640.949,2619.024,646.407,2619.024Z"
+                                  transform="translate(-636.525 -2601.488)" fill="#fff" />
+                                <path id="Path_86" data-name="Path 86"
+                                  d="M646.407,2621.7a21.343,21.343,0,0,0,2.754-.175v-2.809a21.12,21.12,0,0,1-2.754.177c-4.764,0-8.739-1.529-9.673-3.563a2.183,2.183,0,0,0-.209.918v.973C636.525,2619.7,640.949,2621.7,646.407,2621.7Z"
+                                  transform="translate(-636.525 -2599.155)" fill="#fff" />
+                                <path id="Path_87" data-name="Path 87"
+                                  d="M649.161,2622.585v-.218a21.379,21.379,0,0,1-2.754.177c-4.764,0-8.739-1.529-9.673-3.565a2.193,2.193,0,0,0-.209.919v.971c0,2.475,4.424,4.482,9.882,4.482a20.972,20.972,0,0,0,3.124-.228,3.545,3.545,0,0,1-.37-1.567Z"
+                                  transform="translate(-636.525 -2597.792)" fill="#fff" />
+                                <path id="Path_88" data-name="Path 88"
+                                  d="M656.778,2603.555c-5.457,0-9.881,2.006-9.881,4.481v.973c0,2.474,4.423,4.481,9.881,4.481s9.879-2.007,9.879-4.481v-.973C666.657,2605.561,662.234,2603.555,656.778,2603.555Z"
+                                  transform="translate(-632.65 -2603.555)" fill="#fff" />
+                                <path id="Path_89" data-name="Path 89"
+                                  d="M656.778,2613.363c-4.764,0-8.739-1.529-9.673-3.563a2.179,2.179,0,0,0-.207.917v.971c0,2.475,4.423,4.481,9.881,4.481s9.879-2.006,9.879-4.481v-.971a2.179,2.179,0,0,0-.207-.917C665.515,2611.833,661.54,2613.363,656.778,2613.363Z"
+                                  transform="translate(-632.65 -2601.222)" fill="#fff" />
+                                <path id="Path_90" data-name="Path 90"
+                                  d="M656.778,2617.009c-4.764,0-8.739-1.529-9.673-3.563a2.186,2.186,0,0,0-.207.918v.973c0,2.475,4.423,4.48,9.881,4.48s9.879-2.006,9.879-4.48v-.973a2.186,2.186,0,0,0-.207-.918C665.515,2615.482,661.54,2617.009,656.778,2617.009Z"
+                                  transform="translate(-632.65 -2599.859)" fill="#fff" />
+                                <path id="Path_91" data-name="Path 91"
+                                  d="M656.778,2620.854c-4.764,0-8.739-1.529-9.673-3.563a2.187,2.187,0,0,0-.207.917v.971c0,2.475,4.423,4.482,9.881,4.482s9.879-2.007,9.879-4.482v-.971a2.187,2.187,0,0,0-.207-.917C665.515,2619.325,661.54,2620.854,656.778,2620.854Z"
+                                  transform="translate(-632.65 -2598.423)" fill="#fff" />
+                                <path id="Path_92" data-name="Path 92"
+                                  d="M656.778,2624.5c-4.764,0-8.739-1.529-9.673-3.563a2.18,2.18,0,0,0-.207.917v.971c0,2.475,4.423,4.481,9.881,4.481s9.879-2.006,9.879-4.481v-.971a2.18,2.18,0,0,0-.207-.917C665.515,2622.973,661.54,2624.5,656.778,2624.5Z"
+                                  transform="translate(-632.65 -2597.06)" fill="#fff" />
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                        <span class="link-name px-2">{{ 'ORDR_CASH' | translate }}</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="d-flex  p-2 justify-content-between align-items-center dark-btn-anim">
+                        <svg class="img-fluid" id="Group_115" data-name="Group 115" xmlns="http://www.w3.org/2000/svg"
+                          width="32.388" height="32.387" viewBox="0 0 32.388 32.387">
+                          <path id="Path_111" data-name="Path 111"
+                            d="M1065.776,2665.026v-2.082a7.606,7.606,0,1,0-8.495-8.5H1055.2a7.607,7.607,0,1,0-8.5,8.5v2.082a7.607,7.607,0,1,0,8.5,8.5h2.082a7.606,7.606,0,1,0,8.495-8.5Zm-4.75-9.739a.964.964,0,0,1,.966-.839h5.688a.949.949,0,0,1,.943,1.055.964.964,0,0,1-.967.841h-5.688A.947.947,0,0,1,1061.026,2655.287Zm-16.208,1.056a.963.963,0,0,1-.966-.841.948.948,0,0,1,.941-1.055h1.909v-1.909a.948.948,0,0,1,1.055-.941.963.963,0,0,1,.841.966v1.885h1.909a.948.948,0,0,1,.941,1.055.963.963,0,0,1-.966.841H1048.6v1.885a.963.963,0,0,1-.841.966.949.949,0,0,1-1.055-.941v-1.909Zm5.547,17.576a.948.948,0,1,1-1.339,1.341l-1.35-1.351-1.35,1.351a.948.948,0,0,1-1.341-1.341l1.35-1.35-1.35-1.351a.947.947,0,0,1,1.341-1.339l1.35,1.35,1.35-1.35a.947.947,0,0,1,1.339,1.339l-1.35,1.351Zm6.916-2.292H1055.2a7.626,7.626,0,0,0-6.6-6.6v-2.082a7.626,7.626,0,0,0,6.6-6.6h2.082a7.625,7.625,0,0,0,6.6,6.6v2.082a7.625,7.625,0,0,0-6.6,6.6Zm10.4,3.79h-5.688a.963.963,0,0,1-.966-.839.946.946,0,0,1,.941-1.055h5.688a.963.963,0,0,1,.967.841A.948.948,0,0,1,1067.679,2675.417Zm0-3.79h-5.688a.963.963,0,0,1-.966-.838.947.947,0,0,1,.941-1.056h5.688a.964.964,0,0,1,.967.841A.948.948,0,0,1,1067.679,2671.627Z"
+                            transform="translate(-1040.046 -2647.791)" fill="#fff" />
+                        </svg>
+                        <span class="link-name px-2"> {{ 'CALC_INSTL' | translate}} </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- mobile screens -->
+          <div class="cars_carousel-item mobile_screen">
+            <div class="container">
+              <div class="cars_carousel-item--img row">
+                <img class="img-fluid brand-img  p-0 position-absolute px-3 py-1" [src]="swiperItem.BrandImgSrc"
+                  alt="cars offers">
+                <img class="img-fluid w-75 m-auto car-img" [src]="swiperItem.carImgSrc" alt="cars offers">
+              </div>
+              <div class="cars_carousel-item--data row justify-content-center align-items-center flex-column mb-3">
+                <span class="car-name mb-1">{{swiperItem.ArName }}
+                </span>
+                <span class="brand-name mb-1">{{swiperItem.EnName}}</span>
+                <a class="car-desc ">{{'CAR_DESC' | translate }}</a>
+              </div>
+              <div class="cars_carousel-item--price row py-3 mb-3 align-items-center">
+                <span class="price price-before col-5">{{swiperItem.PriceBefor}} <small class="align-text-bottom">{{
+                    'SAR' | translate }}</small></span>
+                <span class="price price-txt col-2 p-0 text-right">{{'AFTER' | translate }}</span>
+                <span class="price price-after col-5 text-left">{{swiperItem.PriceAfter}} <small
+                    class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
+              </div>
+              <div class="cars_carousel-item--btns row">
+                <ul class="cars_carousel-item--btns-list d-flex justify-content-between w-100 ">
+                  <li>
+                    <a href="" class="d-flex p-2 justify-content-between align-items-center rounded dark-btn-anim">
+                      <svg class="img-fluid" xmlns="http://www.w3.org/2000/svg" width="34.007" height="30.249"
+                        viewBox="0 0 34.007 30.249">
+                        <g id="Group_92" data-name="Group 92" transform="translate(0 0)">
+                          <g id="Group_91" data-name="Group 91">
+                            <g id="Group_90" data-name="Group 90">
+                              <path id="Path_85" data-name="Path 85"
+                                d="M646.407,2619.024a21.078,21.078,0,0,0,2.754-.177v-9.582a21.252,21.252,0,0,0-2.754-.177c-5.458,0-9.882,2.006-9.882,4.483v.971C636.525,2617.017,640.949,2619.024,646.407,2619.024Z"
+                                transform="translate(-636.525 -2601.488)" fill="#fff" />
+                              <path id="Path_86" data-name="Path 86"
+                                d="M646.407,2621.7a21.343,21.343,0,0,0,2.754-.175v-2.809a21.12,21.12,0,0,1-2.754.177c-4.764,0-8.739-1.529-9.673-3.563a2.183,2.183,0,0,0-.209.918v.973C636.525,2619.7,640.949,2621.7,646.407,2621.7Z"
+                                transform="translate(-636.525 -2599.155)" fill="#fff" />
+                              <path id="Path_87" data-name="Path 87"
+                                d="M649.161,2622.585v-.218a21.379,21.379,0,0,1-2.754.177c-4.764,0-8.739-1.529-9.673-3.565a2.193,2.193,0,0,0-.209.919v.971c0,2.475,4.424,4.482,9.882,4.482a20.972,20.972,0,0,0,3.124-.228,3.545,3.545,0,0,1-.37-1.567Z"
+                                transform="translate(-636.525 -2597.792)" fill="#fff" />
+                              <path id="Path_88" data-name="Path 88"
+                                d="M656.778,2603.555c-5.457,0-9.881,2.006-9.881,4.481v.973c0,2.474,4.423,4.481,9.881,4.481s9.879-2.007,9.879-4.481v-.973C666.657,2605.561,662.234,2603.555,656.778,2603.555Z"
+                                transform="translate(-632.65 -2603.555)" fill="#fff" />
+                              <path id="Path_89" data-name="Path 89"
+                                d="M656.778,2613.363c-4.764,0-8.739-1.529-9.673-3.563a2.179,2.179,0,0,0-.207.917v.971c0,2.475,4.423,4.481,9.881,4.481s9.879-2.006,9.879-4.481v-.971a2.179,2.179,0,0,0-.207-.917C665.515,2611.833,661.54,2613.363,656.778,2613.363Z"
+                                transform="translate(-632.65 -2601.222)" fill="#fff" />
+                              <path id="Path_90" data-name="Path 90"
+                                d="M656.778,2617.009c-4.764,0-8.739-1.529-9.673-3.563a2.186,2.186,0,0,0-.207.918v.973c0,2.475,4.423,4.48,9.881,4.48s9.879-2.006,9.879-4.48v-.973a2.186,2.186,0,0,0-.207-.918C665.515,2615.482,661.54,2617.009,656.778,2617.009Z"
+                                transform="translate(-632.65 -2599.859)" fill="#fff" />
+                              <path id="Path_91" data-name="Path 91"
+                                d="M656.778,2620.854c-4.764,0-8.739-1.529-9.673-3.563a2.187,2.187,0,0,0-.207.917v.971c0,2.475,4.423,4.482,9.881,4.482s9.879-2.007,9.879-4.482v-.971a2.187,2.187,0,0,0-.207-.917C665.515,2619.325,661.54,2620.854,656.778,2620.854Z"
+                                transform="translate(-632.65 -2598.423)" fill="#fff" />
+                              <path id="Path_92" data-name="Path 92"
+                                d="M656.778,2624.5c-4.764,0-8.739-1.529-9.673-3.563a2.18,2.18,0,0,0-.207.917v.971c0,2.475,4.423,4.481,9.881,4.481s9.879-2.006,9.879-4.481v-.971a2.18,2.18,0,0,0-.207-.917C665.515,2622.973,661.54,2624.5,656.778,2624.5Z"
+                                transform="translate(-632.65 -2597.06)" fill="#fff" />
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                      <span class="link-name px-2">{{ 'ORDR_CASH' | translate }}</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="d-flex  p-2 justify-content-between align-items-center rounded dark-btn-anim">
                       <svg class="img-fluid" id="Group_115" data-name="Group 115" xmlns="http://www.w3.org/2000/svg"
                         width="32.388" height="32.387" viewBox="0 0 32.388 32.387">
                         <path id="Path_111" data-name="Path 111"
@@ -147,156 +355,6 @@
           </div>
         </div>
       </ng-template>
-  </swiper>
-</section>
-
-  <!--  All Items swiper-->
-  <section *ngIf="isAllCars == true">
-    <swiper  class="" [slidesPerView]="1" [spaceBetween]="10" [navigation]="true" dir="rtl"
-    [breakpoints]="{
-      '640': {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-      '768': {
-        slidesPerView: 2,
-        spaceBetween: 20
-      },
-      '1024': {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
-    }"
-    class="mySwiper" id="mySwiper-offers" >
-        <ng-template swiperSlide *ngFor="let swiperItem of response.AllCarsArr[translate.currentLang]" >
-          <div class="container" >
-            <!-- larg screens and ipad -->
-            <div class="services_carousel-item larg_screen">
-              <div class="container">
-                <div class="services_carousel-item--img row">
-                  <span class="label position-absolute px-3 py-1 rounded">{{ 'NEW' | translate}}</span>
-                  <img class="img-fluid w-75 m-auto" [src]="swiperItem.carImgSrc"
-                    alt="cars offers">
-                </div>
-                <div class="services_carousel-item--data row justify-content-between align-items-center">
-                  <span class="name col-8 p-0">{{swiperItem.ArName }}
-                  </span>
-                  <img class="img-fluid brand-img col-3 p-0"
-                    [src]="swiperItem.BrandImgSrc" alt="cars offers">
-                </div>
-                <div class="services_carousel-item--info row justify-content-between mb-3 pb-3 ">
-                  <a class="name col-">{{'CAR_DESC' | translate }}</a>
-                  <span class="brand-name">{{swiperItem.EnName}}</span>
-                </div>
-                <div class="row justify-content-between">
-                  <div class="services_carousel-item--price d-flex flex-column justify-content-center">
-                    <span class="price price-before mb-auto">{{swiperItem.PriceBefor}}<small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
-                    <span class="price price-txt text-right">{{'AFTER' | translate }}</span>
-                    <span class="price price-after mt-auto">{{swiperItem.PriceAfter}}<small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
-                  </div>
-                  <div class="services_carousel-item--btns col-6 p-0 d-inline-block">
-                    <ul class="services_carousel-item--btns-list">
-                      <li class="mb-2">
-                        <a href="" class="d-flex p-2 justify-content-between align-items-center">
-                          <svg class="img-fluid" xmlns="http://www.w3.org/2000/svg" width="34.007" height="30.249" viewBox="0 0 34.007 30.249">
-                            <g id="Group_92" data-name="Group 92" transform="translate(0 0)">
-                              <g id="Group_91" data-name="Group 91">
-                                <g id="Group_90" data-name="Group 90">
-                                  <path id="Path_85" data-name="Path 85" d="M646.407,2619.024a21.078,21.078,0,0,0,2.754-.177v-9.582a21.252,21.252,0,0,0-2.754-.177c-5.458,0-9.882,2.006-9.882,4.483v.971C636.525,2617.017,640.949,2619.024,646.407,2619.024Z" transform="translate(-636.525 -2601.488)" fill="#fff"/>
-                                  <path id="Path_86" data-name="Path 86" d="M646.407,2621.7a21.343,21.343,0,0,0,2.754-.175v-2.809a21.12,21.12,0,0,1-2.754.177c-4.764,0-8.739-1.529-9.673-3.563a2.183,2.183,0,0,0-.209.918v.973C636.525,2619.7,640.949,2621.7,646.407,2621.7Z" transform="translate(-636.525 -2599.155)" fill="#fff"/>
-                                  <path id="Path_87" data-name="Path 87" d="M649.161,2622.585v-.218a21.379,21.379,0,0,1-2.754.177c-4.764,0-8.739-1.529-9.673-3.565a2.193,2.193,0,0,0-.209.919v.971c0,2.475,4.424,4.482,9.882,4.482a20.972,20.972,0,0,0,3.124-.228,3.545,3.545,0,0,1-.37-1.567Z" transform="translate(-636.525 -2597.792)" fill="#fff"/>
-                                  <path id="Path_88" data-name="Path 88" d="M656.778,2603.555c-5.457,0-9.881,2.006-9.881,4.481v.973c0,2.474,4.423,4.481,9.881,4.481s9.879-2.007,9.879-4.481v-.973C666.657,2605.561,662.234,2603.555,656.778,2603.555Z" transform="translate(-632.65 -2603.555)" fill="#fff"/>
-                                  <path id="Path_89" data-name="Path 89" d="M656.778,2613.363c-4.764,0-8.739-1.529-9.673-3.563a2.179,2.179,0,0,0-.207.917v.971c0,2.475,4.423,4.481,9.881,4.481s9.879-2.006,9.879-4.481v-.971a2.179,2.179,0,0,0-.207-.917C665.515,2611.833,661.54,2613.363,656.778,2613.363Z" transform="translate(-632.65 -2601.222)" fill="#fff"/>
-                                  <path id="Path_90" data-name="Path 90" d="M656.778,2617.009c-4.764,0-8.739-1.529-9.673-3.563a2.186,2.186,0,0,0-.207.918v.973c0,2.475,4.423,4.48,9.881,4.48s9.879-2.006,9.879-4.48v-.973a2.186,2.186,0,0,0-.207-.918C665.515,2615.482,661.54,2617.009,656.778,2617.009Z" transform="translate(-632.65 -2599.859)" fill="#fff"/>
-                                  <path id="Path_91" data-name="Path 91" d="M656.778,2620.854c-4.764,0-8.739-1.529-9.673-3.563a2.187,2.187,0,0,0-.207.917v.971c0,2.475,4.423,4.482,9.881,4.482s9.879-2.007,9.879-4.482v-.971a2.187,2.187,0,0,0-.207-.917C665.515,2619.325,661.54,2620.854,656.778,2620.854Z" transform="translate(-632.65 -2598.423)" fill="#fff"/>
-                                  <path id="Path_92" data-name="Path 92" d="M656.778,2624.5c-4.764,0-8.739-1.529-9.673-3.563a2.18,2.18,0,0,0-.207.917v.971c0,2.475,4.423,4.481,9.881,4.481s9.879-2.006,9.879-4.481v-.971a2.18,2.18,0,0,0-.207-.917C665.515,2622.973,661.54,2624.5,656.778,2624.5Z" transform="translate(-632.65 -2597.06)" fill="#fff"/>
-                                </g>
-                              </g>
-                            </g>
-                          </svg>
-                          <span class="link-name px-2">{{ 'ORDR_CASH' | translate }}</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="" class="d-flex  p-2 justify-content-between align-items-center">
-                          <svg class="img-fluid" id="Group_115" data-name="Group 115" xmlns="http://www.w3.org/2000/svg"
-                            width="32.388" height="32.387" viewBox="0 0 32.388 32.387">
-                            <path id="Path_111" data-name="Path 111"
-                              d="M1065.776,2665.026v-2.082a7.606,7.606,0,1,0-8.495-8.5H1055.2a7.607,7.607,0,1,0-8.5,8.5v2.082a7.607,7.607,0,1,0,8.5,8.5h2.082a7.606,7.606,0,1,0,8.495-8.5Zm-4.75-9.739a.964.964,0,0,1,.966-.839h5.688a.949.949,0,0,1,.943,1.055.964.964,0,0,1-.967.841h-5.688A.947.947,0,0,1,1061.026,2655.287Zm-16.208,1.056a.963.963,0,0,1-.966-.841.948.948,0,0,1,.941-1.055h1.909v-1.909a.948.948,0,0,1,1.055-.941.963.963,0,0,1,.841.966v1.885h1.909a.948.948,0,0,1,.941,1.055.963.963,0,0,1-.966.841H1048.6v1.885a.963.963,0,0,1-.841.966.949.949,0,0,1-1.055-.941v-1.909Zm5.547,17.576a.948.948,0,1,1-1.339,1.341l-1.35-1.351-1.35,1.351a.948.948,0,0,1-1.341-1.341l1.35-1.35-1.35-1.351a.947.947,0,0,1,1.341-1.339l1.35,1.35,1.35-1.35a.947.947,0,0,1,1.339,1.339l-1.35,1.351Zm6.916-2.292H1055.2a7.626,7.626,0,0,0-6.6-6.6v-2.082a7.626,7.626,0,0,0,6.6-6.6h2.082a7.625,7.625,0,0,0,6.6,6.6v2.082a7.625,7.625,0,0,0-6.6,6.6Zm10.4,3.79h-5.688a.963.963,0,0,1-.966-.839.946.946,0,0,1,.941-1.055h5.688a.963.963,0,0,1,.967.841A.948.948,0,0,1,1067.679,2675.417Zm0-3.79h-5.688a.963.963,0,0,1-.966-.838.947.947,0,0,1,.941-1.056h5.688a.964.964,0,0,1,.967.841A.948.948,0,0,1,1067.679,2671.627Z"
-                              transform="translate(-1040.046 -2647.791)" fill="#fff" />
-                          </svg>
-                          <span class="link-name px-2">{{ 'CALC_INSTL' | translate}}</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- mobile screens -->
-            <div class="services_carousel-item mobile_screen">
-              <div class="container">
-                <div class="services_carousel-item--img row">
-                  <!-- <span class="label position-absolute px-3 py-1 rounded">جديد</span> -->
-                  <img class="img-fluid brand-img  p-0 position-absolute px-3 py-1"
-                  [src]="swiperItem.BrandImgSrc" alt="cars offers">
-                  <img class="img-fluid w-75 m-auto car-img" [src]="swiperItem.carImgSrc"
-                    alt="cars offers">
-                </div>
-                <div class="services_carousel-item--data row justify-content-center align-items-center flex-column mb-3">
-                  <span class="car-name mb-1">{{swiperItem.ArName }}
-                  </span>
-                  <span class="brand-name mb-1">{{swiperItem.EnName}}</span>
-                  <a class="car-desc ">{{'CAR_DESC' | translate }}</a>
-
-                  <!-- <img class="img-fluid brand-img col-3 p-0"
-                    [src]="swiperItem.BrandImgSrc" alt="cars offers"> -->
-                </div>
-                <div class="services_carousel-item--price row py-3 mb-3 align-items-center">
-                  <span class="price price-before col-5">{{swiperItem.PriceBefor}} <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
-                  <span class="price price-txt col-2 p-0 text-right">{{'AFTER' | translate }}</span>
-                  <span class="price price-after col-5 text-left">{{swiperItem.PriceAfter}} <small class="align-text-bottom">{{ 'SAR' | translate }}</small></span>
-                </div>
-                <div class="services_carousel-item--btns row">
-                  <ul class="services_carousel-item--btns-list d-flex justify-content-between w-100">
-                    <li>
-                      <a href="" class="d-flex p-2 justify-content-between align-items-center rounded">
-                      <svg class="img-fluid" xmlns="http://www.w3.org/2000/svg" width="34.007" height="30.249" viewBox="0 0 34.007 30.249">
-                        <g id="Group_92" data-name="Group 92" transform="translate(0 0)">
-                            <g id="Group_91" data-name="Group 91">
-                              <g id="Group_90" data-name="Group 90">
-                              <path id="Path_85" data-name="Path 85" d="M646.407,2619.024a21.078,21.078,0,0,0,2.754-.177v-9.582a21.252,21.252,0,0,0-2.754-.177c-5.458,0-9.882,2.006-9.882,4.483v.971C636.525,2617.017,640.949,2619.024,646.407,2619.024Z" transform="translate(-636.525 -2601.488)" fill="#fff"/>
-                                <path id="Path_86" data-name="Path 86" d="M646.407,2621.7a21.343,21.343,0,0,0,2.754-.175v-2.809a21.12,21.12,0,0,1-2.754.177c-4.764,0-8.739-1.529-9.673-3.563a2.183,2.183,0,0,0-.209.918v.973C636.525,2619.7,640.949,2621.7,646.407,2621.7Z" transform="translate(-636.525 -2599.155)" fill="#fff"/>
-                                <path id="Path_87" data-name="Path 87" d="M649.161,2622.585v-.218a21.379,21.379,0,0,1-2.754.177c-4.764,0-8.739-1.529-9.673-3.565a2.193,2.193,0,0,0-.209.919v.971c0,2.475,4.424,4.482,9.882,4.482a20.972,20.972,0,0,0,3.124-.228,3.545,3.545,0,0,1-.37-1.567Z" transform="translate(-636.525 -2597.792)" fill="#fff"/>
-                                <path id="Path_88" data-name="Path 88" d="M656.778,2603.555c-5.457,0-9.881,2.006-9.881,4.481v.973c0,2.474,4.423,4.481,9.881,4.481s9.879-2.007,9.879-4.481v-.973C666.657,2605.561,662.234,2603.555,656.778,2603.555Z" transform="translate(-632.65 -2603.555)" fill="#fff"/>
-                                <path id="Path_89" data-name="Path 89" d="M656.778,2613.363c-4.764,0-8.739-1.529-9.673-3.563a2.179,2.179,0,0,0-.207.917v.971c0,2.475,4.423,4.481,9.881,4.481s9.879-2.006,9.879-4.481v-.971a2.179,2.179,0,0,0-.207-.917C665.515,2611.833,661.54,2613.363,656.778,2613.363Z" transform="translate(-632.65 -2601.222)" fill="#fff"/>
-                                <path id="Path_90" data-name="Path 90" d="M656.778,2617.009c-4.764,0-8.739-1.529-9.673-3.563a2.186,2.186,0,0,0-.207.918v.973c0,2.475,4.423,4.48,9.881,4.48s9.879-2.006,9.879-4.48v-.973a2.186,2.186,0,0,0-.207-.918C665.515,2615.482,661.54,2617.009,656.778,2617.009Z" transform="translate(-632.65 -2599.859)" fill="#fff"/>
-                                <path id="Path_91" data-name="Path 91" d="M656.778,2620.854c-4.764,0-8.739-1.529-9.673-3.563a2.187,2.187,0,0,0-.207.917v.971c0,2.475,4.423,4.482,9.881,4.482s9.879-2.007,9.879-4.482v-.971a2.187,2.187,0,0,0-.207-.917C665.515,2619.325,661.54,2620.854,656.778,2620.854Z" transform="translate(-632.65 -2598.423)" fill="#fff"/>
-                                <path id="Path_92" data-name="Path 92" d="M656.778,2624.5c-4.764,0-8.739-1.529-9.673-3.563a2.18,2.18,0,0,0-.207.917v.971c0,2.475,4.423,4.481,9.881,4.481s9.879-2.006,9.879-4.481v-.971a2.18,2.18,0,0,0-.207-.917C665.515,2622.973,661.54,2624.5,656.778,2624.5Z" transform="translate(-632.65 -2597.06)" fill="#fff"/>
-                              </g>
-                            </g>
-                          </g>
-                        </svg>
-                        <span class="link-name px-2">{{ 'ORDR_CASH' | translate }}</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="" class="d-flex  p-2 justify-content-between align-items-center rounded">
-                        <svg class="img-fluid" id="Group_115" data-name="Group 115" xmlns="http://www.w3.org/2000/svg"
-                          width="32.388" height="32.387" viewBox="0 0 32.388 32.387">
-                          <path id="Path_111" data-name="Path 111"
-                            d="M1065.776,2665.026v-2.082a7.606,7.606,0,1,0-8.495-8.5H1055.2a7.607,7.607,0,1,0-8.5,8.5v2.082a7.607,7.607,0,1,0,8.5,8.5h2.082a7.606,7.606,0,1,0,8.495-8.5Zm-4.75-9.739a.964.964,0,0,1,.966-.839h5.688a.949.949,0,0,1,.943,1.055.964.964,0,0,1-.967.841h-5.688A.947.947,0,0,1,1061.026,2655.287Zm-16.208,1.056a.963.963,0,0,1-.966-.841.948.948,0,0,1,.941-1.055h1.909v-1.909a.948.948,0,0,1,1.055-.941.963.963,0,0,1,.841.966v1.885h1.909a.948.948,0,0,1,.941,1.055.963.963,0,0,1-.966.841H1048.6v1.885a.963.963,0,0,1-.841.966.949.949,0,0,1-1.055-.941v-1.909Zm5.547,17.576a.948.948,0,1,1-1.339,1.341l-1.35-1.351-1.35,1.351a.948.948,0,0,1-1.341-1.341l1.35-1.35-1.35-1.351a.947.947,0,0,1,1.341-1.339l1.35,1.35,1.35-1.35a.947.947,0,0,1,1.339,1.339l-1.35,1.351Zm6.916-2.292H1055.2a7.626,7.626,0,0,0-6.6-6.6v-2.082a7.626,7.626,0,0,0,6.6-6.6h2.082a7.625,7.625,0,0,0,6.6,6.6v2.082a7.625,7.625,0,0,0-6.6,6.6Zm10.4,3.79h-5.688a.963.963,0,0,1-.966-.839.946.946,0,0,1,.941-1.055h5.688a.963.963,0,0,1,.967.841A.948.948,0,0,1,1067.679,2675.417Zm0-3.79h-5.688a.963.963,0,0,1-.966-.838.947.947,0,0,1,.941-1.056h5.688a.964.964,0,0,1,.967.841A.948.948,0,0,1,1067.679,2671.627Z"
-                            transform="translate(-1040.046 -2647.791)" fill="#fff" />
-                        </svg>
-                        <span class="link-name px-2">{{ 'CALC_INSTL' | translate}}</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </ng-template>
     </swiper>
   </section>
 </div>

@@ -29,7 +29,6 @@ import { HomeModule } from './home-page/home.module';
     TranslateModule.forRoot({
       defaultLanguage:"ar",
       loader: {
-        // provide: TranslateHttpLoader,
         provide: TranslateLoader,
         // useClass: TranslateFakeLoader,
         useFactory: CreateTranslateLoader,

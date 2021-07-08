@@ -3,7 +3,6 @@
 
 .rtl {
   @import './app/shared/styles/themes/_ar';
-  // color: blue
 }
 .ltr {
   @import './app/shared/styles/themes/_en';
@@ -18,7 +17,6 @@
 
 *{
   box-sizing: border-box;
-  // text-align: right;
   scroll-behavior: smooth;
 
 }
@@ -53,3 +51,5 @@ a{
     font-size: 1.4rem;
   }
 }
+
+

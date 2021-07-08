@@ -45,7 +45,8 @@
   "CUSTMR_SRV": "Customer Service",
   "SALES": "company sales ",
   "CMPLAINTS": "complaints ",
-  "GNRL_MNG": "Best seller",
+  "GNRL_MNG": "General Managment",
+  "BST_SELL": "Best Sellers",
   "HYUNDAI": "Hyundai",
   "KIA": "Kia",
   "CHEVROLET": "Chevrolet",
@@ -65,9 +66,12 @@
   "SBSCRIB": "Subscribe with us to receive all new",
   "ENTR_EMAIL": "Enter your e-mail address",
   "SHARE": "Share",
+  "SHARE_ICON":"fa-arrow-circle-right",
+  "LINKS_ICON":"fa-chevron-right",
   "EMAIL_MSG": "We send you the best offers and the latest car news for our subscribed users",
   "SIGNATURE": "All rights reserved to Ramz Elehktear 2021 &copy; ",
   "SIGNATURE_2_TXT": "All rights reserved to  2021 &copy; ",
   "COMPNY_NAME": "Ramz Elehktear " ,
   "SIGNATURE_2_YEAR": "2021 &copy;"
+
 }

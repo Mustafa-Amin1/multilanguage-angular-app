@@ -1,0 +1,103 @@
+// *********************************************************************************************
+// Animation Styles
+// ***********************************************************************************************
+
+
+// start services carousel animation
+.swiper-slide{
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+.services_carousel-item--title h2,
+.services_carousel-item-seeMore {
+  transition: .1s !important;
+  -webkit-transition: .1s !important;
+  -moz-transition: .1s !important;
+  -ms-transition: .1s !important;
+  -o-transition: .1s !important;
+}
+.swiper-slide:hover .services_carousel-item .services_carousel-item--title h2{
+   font-weight: bold !important;
+}
+.swiper-slide:hover .services_carousel-item .services_carousel-item-seeMore{
+position: relative;
+top: 5px;
+}
+// End services carousel animation
+
+// Start cars carousel animation
+.cars_carousel-item  .label,
+.cars_carousel-item img{
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+}
+.swiper-slide:hover {
+  .cars_carousel-item {
+  .name{
+    font-weight: bold !important;
+    color: #A58F33 !important;
+  }
+  .label {
+    animation: rotatelabel 1s infinite;
+    animation-delay: .5s;
+    -webkit-animation: rotatelabel 1s infinite;
+    top: 4px !important;
+  }
+  img {
+    transform: scale(1.1);
+  }
+ }
+
+}
+@keyframes rotatelabel {
+  0%,100% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+25%{
+  transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+
+}
+  50% {
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    //transform: rotate(0deg);
+    //-webkit-transform: rotate(0deg);
+    //-moz-transform: rotate(0deg);
+    //-ms-transform: rotate(0deg);
+    //-o-transform: rotate(0deg);
+}
+  75% {
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+}
+ }
+// End cars carousel animation
+
+
+// download profile and app
+.about_us-download:hover {
+  p {
+    color: #A58F33;
+}
+}
+

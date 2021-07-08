@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./car-offers.component.scss']
 })
 export class CarOffersComponent implements OnInit {
-public isAllCars= false
+  public isAllCars = false
 
   constructor(public translate: TranslateService) { }
   @Input()
@@ -18,10 +18,10 @@ public isAllCars= false
   public toggleSections(e) {
     let offerLinksArr = Array.from(document.querySelectorAll('.carOffers_sections-link'))
     let clickedLink = e.target
-    for(let link of offerLinksArr) {
-      if(link.innerHTML === clickedLink.innerHTML) {
+    for (let link of offerLinksArr) {
+      if (link.innerHTML === clickedLink.innerHTML) {
         link.classList.add('carOffers_sections-link-active')
-      }else {
+      } else {
         link.classList.remove('carOffers_sections-link-active')
       }
     }

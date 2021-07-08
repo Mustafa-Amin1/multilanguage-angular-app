@@ -7,7 +7,8 @@
       </h2>
       <div id="paragraphTxt" class="services_text section_text">
         <p>
-          <span class="highlighted-txt">{{response.HighLightedText[translate.currentLang]}}</span>  {{response.Text1[translate.currentLang]}}
+          <span class="highlighted-txt">{{response.HighLightedText[translate.currentLang]}}</span>
+          {{response.Text1[translate.currentLang]}}
         </p>
         <p>
           {{response.Text2[translate.currentLang]}}
@@ -16,7 +17,8 @@
           {{response.Text3[translate.currentLang]}}
         </p>
       </div>
-      <a class="services_btn mr-auto p-2 d-flex align-items-center justify-content-between " id="seeMoreBtn" (click)="seeMore()">
+      <a class="services_btn mr-auto p-2 d-flex align-items-center justify-content-between " id="seeMoreBtn"
+        (click)="seeMore()">
         <span class="d-inline">{{'MORE' | translate}}</span>
         <span class="fas fa-chevron-down icon  d-inline"></span>
       </a>

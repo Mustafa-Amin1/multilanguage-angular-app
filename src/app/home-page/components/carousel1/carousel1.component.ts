@@ -1,4 +1,4 @@
-import { Component, OnInit ,ViewEncapsulation} from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 // import Swiper core and required modules
 import SwiperCore, {
   Lazy,
@@ -6,7 +6,6 @@ import SwiperCore, {
   Pagination,
   Mousewheel,
   Keyboard,
-  Swiper,
 } from "swiper/core";
 
 // install Swiper modules
@@ -21,9 +20,9 @@ SwiperCore.use([Lazy, Navigation, Pagination, Mousewheel, Keyboard]);
 })
 export class Carousel1Component implements OnInit {
   public images = [
-    {path: '../../../../assets/images/home-page/carousel/carousel1.png'},
-    {path: '../../../../assets/images/home-page/carousel/carousel2.png'},
-    {path: '../../../../assets/images/home-page/carousel/carousel3.png'},
+    { path: '../../../../assets/images/home-page/carousel/carousel1.png' },
+    { path: '../../../../assets/images/home-page/carousel/carousel2.png' },
+    { path: '../../../../assets/images/home-page/carousel/carousel3.png' },
   ]
   constructor() { }
 

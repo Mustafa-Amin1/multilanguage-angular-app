@@ -1,36 +1,34 @@
 #carOffers {
-  .carOffers_sections {
-    .carOffers_sections-link {
-      border-radius: 10px;
-      box-shadow: 0 2px 3px 0px lightgrey;
-      color: #A58F33;
-      position: relative;
-      &:nth-child(1) {
-        left: -8px;
-      }
+.carOffers_sections {
+  .carOffers_sections-link {
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0px lightgrey;
+    color: #A58F33;
+    position: relative;
+    &:nth-child(1) {
+      left: -8px;
     }
-    .carOffers_sections-link-active {
-      // border-radius: 10px;
-      // box-shadow: 0 2px 3px 0px lightgrey;
-      color: white;
-      position: relative;
-      background-color: #A58F33;
-      z-index: 1;
-      &::after {
-        content:'';
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        width: 0;
-        height: 0;
-        border-top: solid 12px #A58F33;
-        border-left: solid 5px transparent;
-        border-right: solid 5px transparent;
-      }
-}
   }
+  .carOffers_sections-link-active {
+    color: white;
+    position: relative;
+    background-color: #A58F33;
+    z-index: 1;
+    &::after {
+      content:'';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 0;
+      height: 0;
+      border-top: solid 12px #A58F33;
+      border-left: solid 5px transparent;
+      border-right: solid 5px transparent;
+    }
+}
+}
 }
 
 

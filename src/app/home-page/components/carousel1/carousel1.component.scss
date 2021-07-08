@@ -6,11 +6,9 @@
 @import "~swiper/components/pagination/pagination";
 
 #carousel {
-  // height: 83vh;
   .swiper-container {
     width: 100%;
     height: 100%;
-
   }
   .swiper-button-prev::after,
   .swiper-button-next::after{
@@ -42,13 +40,6 @@
     object-fit: fill;
     max-width: 100%;
     max-height: 100%;
-    // -ms-transform: translate(-50%, -50%);
-    // -webkit-transform: translate(-50%, -50%);
-    // -moz-transform: translate(-50%, -50%);
-    // transform: translate(-50%, -50%);
-    // position: absolute;
-    // left: 50%;
-    // top: 50%;
   }
 
 }

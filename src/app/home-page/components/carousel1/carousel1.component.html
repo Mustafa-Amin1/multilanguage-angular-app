@@ -1,22 +1,12 @@
 <div id="carousel">
-  <swiper
-  [slidesPerView]="1"
-  [spaceBetween]="50"
-  (swiper)="onSwiper($event)"
-  (slideChange)="onSlideChange()"
-  [navigation]="true"
-  [lazy]="true"
-  dir="rtl"
-  [pagination]="{ clickable: true }"
-  [scrollbar]="{ draggable: true }" class="mySwiper"
->
-  <ng-template swiperSlide *ngFor="let imgItem of images">
-    <img data-src="{{imgItem.path}}" class=" swiper-lazy" >
-     <!-- Preloader image -->
-     <div
-     class="swiper-lazy-preloader swiper-lazy-preloader-white"
-   ></div>
-  </ng-template>
-</swiper>
+  <swiper [slidesPerView]="1" [spaceBetween]="50" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()"
+    [navigation]="true" [lazy]="true" dir="rtl" [pagination]="{ clickable: true }" [scrollbar]="{ draggable: true }"
+    class="mySwiper">
+    <ng-template swiperSlide *ngFor="let imgItem of images">
+      <img data-src="{{imgItem.path}}" class=" swiper-lazy">
+      <!-- Preloader image -->
+      <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+    </ng-template>
+  </swiper>
 
 </div>
