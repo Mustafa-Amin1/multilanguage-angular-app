@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-navbar',
@@ -30,6 +30,7 @@ import { TranslateService } from '@ngx-translate/core';
   ]
 })
 export class NavbarComponent implements OnInit {
+
   public isCollapsed = false;
   public smallScreens = false
   public menuState: string = 'closed';
@@ -37,11 +38,11 @@ export class NavbarComponent implements OnInit {
   public selectedLanguageImg = ''
   public selectedLanguage = 'Arabic'
   constructor(public translate: TranslateService) { }
+  @Input()language: string = this.selectedLanguage;
+  @Output() languageChanged: EventEmitter<string> =   new EventEmitter();
   ngOnInit(): void {
     this.selectLanguageChange()
   }
-  // public selectedLanguageImg ='../../../../assets/images/languages/iconfinder_16014_england_english_flag_great britain_inghilterra_icon_48px.png'
-
   public toggleMenu() {
     this.menuState = this.menuState === 'closed' ? 'opened' : 'closed';
     console.log(this.menuState);
@@ -53,6 +54,8 @@ export class NavbarComponent implements OnInit {
 
 
   public selectLanguageChange() {
+
+
     console.log(this.selectedLanguage)
     let bodyTag = document.getElementsByTagName('body')[0]
 
@@ -75,7 +78,8 @@ export class NavbarComponent implements OnInit {
       this.translate.use('ar')
       localStorage.setItem('selectedLang', 'ar')
     }
-
+  // to send data to app component
+  this.languageChanged.emit(this.selectedLanguage);
   }
 
 }

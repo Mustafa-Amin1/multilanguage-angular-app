@@ -1,7 +1,8 @@
-<!-- <div  [ngClass]="'currentTheme' | translate"> -->
-<div [ngClass]="currentLang == 'en' ? 'ltr' : 'rtl' ">
-  <!-- header -->
-  <app-navbar></app-navbar>
+<!-- <div id="appComponent"  [ngClass]="['currentTheme' | translate, main]"> -->
+  <div  [ngClass]=" language == 'English' || currentLang == 'en' ? 'ltr' : 'rtl' ">
+
+ <!-- header -->
+  <app-navbar [language]=language (languageChanged)="languageChanged($event)"></app-navbar>
 
   <!-- routes will be rendered here -->
   <router-outlet></router-outlet>
