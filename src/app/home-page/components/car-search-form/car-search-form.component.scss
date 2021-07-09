@@ -165,9 +165,12 @@ color: #606060 !important;
 //tooltip
 .e-slider-tooltip.e-tooltip-wrap.e-popup {
   background-color: #E0E0E2 ;
+  text-overflow: ellipsis;
 }
 .e-slider-tooltip.e-tooltip-wrap.e-popup .e-tip-content {
   color: #606060;
+  text-overflow: ellipsis;
+
 }
 .e-slider-tooltip.e-tooltip-wrap.e-popup .e-arrow-tip-outer.e-tip-bottom {
 
@@ -176,6 +179,8 @@ color: #606060 !important;
 }
 .e-slider-tooltip.e-tooltip-wrap.e-popup .e-arrow-tip-inner {
   color: #E0E0E2;
+  text-overflow: ellipsis;
+
 }
 //limits
 .e-control-wrapper.e-slider-container.e-horizontal .e-limits {

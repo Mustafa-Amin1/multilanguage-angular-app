@@ -24,7 +24,7 @@ export class CarSearchFormComponent implements OnInit {
   @ViewChild('range')
   public rangeObj: SliderComponent;
   public min: number = 0;
-  public max: number = 1000;
+  public max: number = 2000;
   public minValue: number = 300;
   public rangeValue: number[] = [300, 600];
   public minType: SliderType = 'MinRange';
@@ -33,7 +33,7 @@ export class CarSearchFormComponent implements OnInit {
     placement: 'Before',
     isVisible: true,
     showOn: 'Focus',
-    format: 'SAR ##.##'
+    format: 'SAR ####'
   };
   public rangeLimits: LimitDataModel = { enabled: false, minStart: this.min, minEnd: this.rangeValue[0], maxEnd: this.max };
   //  End price range slider
@@ -62,6 +62,8 @@ export class CarSearchFormComponent implements OnInit {
 
   public carModelsWaterMark: string;
   ngOnInit(): void {
+    debugger;
+
   // set the placeholder to DropDownList input element
     this.translate.onLangChange.subscribe(() => {
       // change place holder
@@ -77,7 +79,7 @@ export class CarSearchFormComponent implements OnInit {
   }
 
   onSubmit() {
-
+debugger;
     alert('hello')
     console.log(this.searchForm.value)
     console.log('hello')
